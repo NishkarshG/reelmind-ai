@@ -1,0 +1,18 @@
+# Netlify hosts the React frontend. Netlify cannot run the Python/FastAPI
+# backend, so by default the site is built as a clearly-labelled, read-only
+# STATIC PREVIEW of the demo workspace (VITE_STATIC_DEMO=1).
+# To connect a real backend, set VITE_API_URL to your deployed API and
+# VITE_STATIC_DEMO=0 in Netlify → Site configuration → Environment variables.
+[build]
+  base = "frontend"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  VITE_STATIC_DEMO = "1"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
