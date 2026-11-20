@@ -9,7 +9,7 @@ export interface ScoreSet {
 
 export interface Element {
   id: string;
-  kind: "dialogue" | "action";
+  kind: "dialogue" | "action" | "camera" | "sound";
   text: string;
   start: string | null;
   end: string | null;

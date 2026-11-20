@@ -9,7 +9,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-from .parser import seconds_to_ts, ts_to_seconds
+from .parser import ts_to_seconds
 
 MAX = {"hook_strength": 30, "cliffhanger_strength": 30, "emotional_impact": 20, "standalone_clarity": 20}
 
@@ -70,20 +70,26 @@ def build_candidate(raw: dict, episode: dict, ctx: dict, settings: dict, known_e
         if order[eid] < order[sid]:
             err("reversed_segment", f"Segment {i}: end line {eid} precedes start line {sid}.")
         lines = [e for e in ctx["elements"] if order[sid] <= order[e["id"]] <= order[eid]]
-        st, en = a.get("start_s"), b.get("end_s")
+        # Camera/action/dialogue blocks may overlap in time, so the segment spans the
+        # earliest start and latest end of its lines (original timestamp strings kept).
+        timed = [l for l in lines if l.get("start_s") is not None and l.get("end_s") is not None]
+        first_t = min(timed, key=lambda l: l["start_s"]) if timed else a
+        last_t = max(timed, key=lambda l: l["end_s"]) if timed else b
+        st, en = first_t.get("start_s"), last_t.get("end_s")
+        seg_start, seg_end = first_t.get("start"), last_t.get("end")
         if st is None or en is None:
             err("invalid_timestamp", f"Segment {i}: referenced lines have no timestamps in the screenplay.")
         elif st >= en:
-            err("invalid_timestamp", f"Segment {i}: start {a['start']} is not before end {b['end']}.")
-        for claim, real, label in ((s.get("start"), a.get("start"), "start"), (s.get("end"), b.get("end"), "end")):
+            err("invalid_timestamp", f"Segment {i}: start {seg_start} is not before end {seg_end}.")
+        for claim, real, label in ((s.get("start"), seg_start, "start"), (s.get("end"), seg_end, "end")):
             if claim and real:
                 try:
                     if abs(ts_to_seconds(str(claim)) - ts_to_seconds(real)) > 0.5:
-                        err("invalid_timestamp", f"Segment {i}: claimed {label} {claim} does not match screenplay timestamp {real} for {sid if label == 'start' else eid}.")
+                        err("invalid_timestamp", f"Segment {i}: claimed {label} {claim} does not match screenplay timestamp {real}.")
                 except (ValueError, IndexError):
                     err("invalid_timestamp", f"Segment {i}: claimed {label} '{claim}' is not a valid timestamp.")
         segments.append({
-            "start_line_id": sid, "end_line_id": eid, "start": a.get("start"), "end": b.get("end"),
+            "start_line_id": sid, "end_line_id": eid, "start": seg_start, "end": seg_end,
             "start_s": st, "end_s": en, "duration_s": round((en - st), 3) if st is not None and en is not None else 0,
             "claimed_start": s.get("start"), "claimed_end": s.get("end"),
             "scenes": sorted({l["scene"] for l in lines}),
@@ -152,8 +158,8 @@ def build_candidate(raw: dict, episode: dict, ctx: dict, settings: dict, known_e
         "episode_number": episode["episode_number"],
         "title": (raw.get("title") or "Untitled promo")[:140],
         "segments": segments,
-        "start_ts": seconds_to_ts(start_s) if start_s is not None else None,
-        "end_ts": seconds_to_ts(end_s) if end_s is not None else None,
+        "start_ts": good[0]["start"] if good else None,
+        "end_ts": good[-1]["end"] if good else None,
         "start_s": start_s,
         "end_s": end_s,
         "duration_s": duration,

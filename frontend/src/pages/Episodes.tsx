@@ -5,7 +5,7 @@ import { del, upload } from "../lib/api";
 import { fmtSec } from "../lib/format";
 import { useApi, useStore } from "../lib/store";
 import type { EpisodeDetail, EpisodeSummary } from "../lib/types";
-import { Badge, Button, Card, cx, Drawer, Empty, ErrorBox, Input, Modal, PageHeader, Select, Skeleton, StatusBadge } from "../components/ui";
+import { Badge, BlockText, Button, Card, cx, Drawer, Empty, ErrorBox, Input, Modal, PageHeader, Select, Skeleton, StatusBadge } from "../components/ui";
 
 interface UploadResult {
   episodes: { id: number; file: string; episode_number: number | null; status: string; scenes: number; elements: number; warnings: string[]; errors: string[]; replaced_episode_id: number | null }[];
@@ -391,7 +391,7 @@ export function ScriptDrawer({ id, onClose }: { id: number | null; onClose: () =
                               <span className="text-zinc-300 ml-2">{e.text}</span>
                             </>
                           ) : (
-                            <span className="text-mute italic">{e.text}</span>
+                            <BlockText kind={e.kind} text={e.text} />
                           )}
                         </span>
                       </div>

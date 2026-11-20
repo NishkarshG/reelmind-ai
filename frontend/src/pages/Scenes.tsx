@@ -1,4 +1,4 @@
-import { Clapperboard, Flame, MessageSquare, MousePointerClick, Quote, Video, Zap } from "lucide-react";
+import { Camera, Clapperboard, Flame, MessageSquare, MousePointerClick, Quote, Video, Zap } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { PromoDrawer } from "../components/Promo";
@@ -19,7 +19,7 @@ export default function Scenes() {
   const [selected, setSelected] = useState<string | null>(null);
   const [hoverPromo, setHoverPromo] = useState<number | null>(params.get("promo") ? Number(params.get("promo")) : null);
   const [open, setOpen] = useState<Promo | null>(null);
-  const [lanes, setLanes] = useState({ dialogue: true, action: true, signals: true });
+  const [lanes, setLanes] = useState({ dialogue: true, action: true, camera: true, signals: true });
 
   useEffect(() => setSelected(null), [epId]);
   const current = ep && String(ep.id) === epId ? ep : null;
@@ -102,7 +102,7 @@ export default function Scenes() {
                 <div className="text-[12.5px] text-mute line-clamp-1 mt-0.5">{current.logline}</div>
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {(["dialogue", "action", "signals"] as const).map((k) => (
+                {(["dialogue", "action", "camera", "signals"] as const).map((k) => (
                   <button key={k} onClick={() => setLanes({ ...lanes, [k]: !lanes[k] })} className={cx("h-7 px-2.5 rounded-lg text-[12px] border transition", lanes[k] ? "border-accent/40 bg-accent/15 text-white" : "border-line2 text-mute hover:text-white")}>
                     {k[0].toUpperCase() + k.slice(1)}
                   </button>
@@ -158,11 +158,20 @@ export default function Scenes() {
                   </Lane>
                 )}
                 {lanes.action && (
-                  <Lane label="Action" icon={<Video className="size-3" />}>
+                  <Lane label="Action / SFX" icon={<Video className="size-3" />}>
                     {model.els
-                      .filter((e) => e.kind === "action")
+                      .filter((e) => e.kind === "action" || e.kind === "sound")
                       .map((e) => (
-                        <Beat key={e.id} e={e} pct={pct} active={selected === e.id} color="#67e8f9" onClick={() => setSelected(e.id)} />
+                        <Beat key={e.id} e={e} pct={pct} active={selected === e.id} color={e.kind === "sound" ? "#fbbf24" : "#67e8f9"} onClick={() => setSelected(e.id)} />
+                      ))}
+                  </Lane>
+                )}
+                {lanes.camera && model.els.some((e) => e.kind === "camera") && (
+                  <Lane label="Camera" icon={<Camera className="size-3" />} h="h-9">
+                    {model.els
+                      .filter((e) => e.kind === "camera")
+                      .map((e) => (
+                        <Beat key={e.id} e={e} pct={pct} active={selected === e.id} color="#f472b6" onClick={() => setSelected(e.id)} />
                       ))}
                   </Lane>
                 )}
@@ -205,6 +214,8 @@ export default function Scenes() {
             <div className="flex flex-wrap gap-4 mt-4 text-[11.5px] text-mute">
               <Legend c="#c4b5fd" l="Dialogue beat" />
               <Legend c="#67e8f9" l="Action beat" />
+              <Legend c="#fbbf24" l="Sound FX" />
+              <Legend c="#f472b6" l="Camera shot" />
               <Legend c="#8b5cf6" l="Hook" d />
               <Legend c="#22d3ee" l="Cliffhanger" d />
               <Legend c="#f472b6" l="Emotional peak (highest promo heat)" d />

@@ -1,6 +1,6 @@
 {
   "workspace": "demo",
-  "generated_at": "2026-11-20T17:37:12+00:00",
+  "generated_at": "2026-11-20T18:04:53+00:00",
   "scoring": {
     "hook_strength": 30,
     "cliffhanger_strength": 30,
@@ -10,9 +10,9 @@
   },
   "promos": [
     {
-      "id": 96,
-      "run_id": 20,
-      "episode_id": 20,
+      "id": 122,
+      "run_id": 25,
+      "episode_id": 25,
       "episode_number": 5,
       "title": "Evidence twist — Rhea",
       "segments": [
@@ -81,8 +81,8 @@
           ]
         }
       ],
-      "start_ts": "00:01:11",
-      "end_ts": "00:01:44",
+      "start_ts": "01:11",
+      "end_ts": "01:44",
       "start_s": 71.0,
       "end_s": 104.0,
       "duration_s": 33.0,
@@ -112,8 +112,8 @@
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 29.0,
         "cliffhanger_strength": 23.0,
@@ -123,66 +123,26 @@
       "flags": []
     },
     {
-      "id": 97,
-      "run_id": 20,
-      "episode_id": 20,
+      "id": 121,
+      "run_id": 25,
+      "episode_id": 25,
       "episode_number": 5,
       "title": "Return from the dead",
       "segments": [
         {
-          "start_line_id": "L021",
+          "start_line_id": "L026",
           "end_line_id": "L028",
-          "start": "01:44",
+          "start": "02:12",
           "end": "02:32",
-          "start_s": 104.0,
+          "start_s": 132.0,
           "end_s": 152.0,
-          "duration_s": 48.0,
-          "claimed_start": "01:44",
+          "duration_s": 20.0,
+          "claimed_start": "02:12",
           "claimed_end": "02:32",
           "scenes": [
             3
           ],
           "lines": [
-            {
-              "id": "L021",
-              "kind": "action",
-              "character": null,
-              "text": "Police cars line the driveway. Two officers lead Nandini out in handcuffs.",
-              "start": "01:44",
-              "end": "01:50"
-            },
-            {
-              "id": "L022",
-              "kind": "dialogue",
-              "character": "NANDINI",
-              "text": "This isn't over, Maya. You have no idea who pulled you out of that fire.",
-              "start": "01:50",
-              "end": "01:55"
-            },
-            {
-              "id": "L023",
-              "kind": "action",
-              "character": null,
-              "text": "Maya freezes. Nandini is pushed into the car.",
-              "start": "01:55",
-              "end": "02:00"
-            },
-            {
-              "id": "L024",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "What did she mean? Who saved me?",
-              "start": "02:00",
-              "end": "02:06"
-            },
-            {
-              "id": "L025",
-              "kind": "action",
-              "character": null,
-              "text": "Savitri wheels forward. She looks at Maya, then at the gates, guilt written across her face.",
-              "start": "02:06",
-              "end": "02:12"
-            },
             {
               "id": "L026",
               "kind": "dialogue",
@@ -210,28 +170,27 @@
           ]
         }
       ],
-      "start_ts": "00:01:44",
-      "end_ts": "00:02:32",
-      "start_s": 104.0,
+      "start_ts": "02:12",
+      "end_ts": "02:32",
+      "start_s": 132.0,
       "end_s": 152.0,
-      "duration_s": 48.0,
-      "hook_line": "L021",
-      "hook_text": "Police cars line the driveway. Two officers lead Nandini out in handcuffs.",
+      "duration_s": 20.0,
+      "hook_line": "L028",
+      "hook_text": "The rider lifts the visor. It is a woman, older, with Maya's eyes. Meera. Alive.",
       "hook_speaker": null,
       "cliffhanger_line": "L028",
       "cliffhanger_text": "The rider lifts the visor. It is a woman, older, with Maya's eyes. Meera. Alive.",
       "cliffhanger_speaker": null,
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L021) and closes on L028 at a scene boundary. Keyword signals: secret, alive, fire. Spans 1 scene(s).",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L028) and closes on L028 at a scene boundary. Keyword signals: secret, alive. Spans 1 scene(s).",
       "patterns": [
         "Return from the dead",
-        "Villain downfall",
         "Secret teased"
       ],
       "ai_scores": {
-        "hook_strength": 22.0,
+        "hook_strength": 24.0,
         "cliffhanger_strength": 28.0,
-        "emotional_impact": 14.0,
-        "standalone_clarity": 19.0
+        "emotional_impact": 15.0,
+        "standalone_clarity": 16.0
       },
       "editor_scores": {},
       "overall": 83.0,
@@ -242,20 +201,109 @@
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
-        "hook_strength": 22.0,
+        "hook_strength": 24.0,
         "cliffhanger_strength": 28.0,
-        "emotional_impact": 14.0,
-        "standalone_clarity": 19.0
+        "emotional_impact": 15.0,
+        "standalone_clarity": 16.0
       },
       "flags": []
     },
     {
-      "id": 91,
-      "run_id": 19,
-      "episode_id": 19,
+      "id": 116,
+      "run_id": 24,
+      "episode_id": 24,
+      "episode_number": 4,
+      "title": "Dramatic confrontation — Maya",
+      "segments": [
+        {
+          "start_line_id": "L017",
+          "end_line_id": "L019",
+          "start": "00:01:25",
+          "end": "00:01:45",
+          "start_s": 85.0,
+          "end_s": 105.0,
+          "duration_s": 20.0,
+          "claimed_start": "00:01:25",
+          "claimed_end": "00:01:45",
+          "scenes": [
+            2,
+            3
+          ],
+          "lines": [
+            {
+              "id": "L017",
+              "kind": "dialogue",
+              "character": "NANDINI (V.O.)",
+              "text": "You were never going to have him. He was a contract. Now do as I say.",
+              "start": "00:01:25",
+              "end": "00:01:32"
+            },
+            {
+              "id": "L018",
+              "kind": "action",
+              "character": null,
+              "text": "Rhea lowers the phone, shaking. For the first time, she looks afraid of her own mother.",
+              "start": "00:01:32",
+              "end": "00:01:40"
+            },
+            {
+              "id": "L019",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "If my mother was murdered, I want the person who did it to lose everything.",
+              "start": "00:01:40",
+              "end": "00:01:45"
+            }
+          ]
+        }
+      ],
+      "start_ts": "00:01:25",
+      "end_ts": "00:01:45",
+      "start_s": 85.0,
+      "end_s": 105.0,
+      "duration_s": 20.0,
+      "hook_line": "L019",
+      "hook_text": "If my mother was murdered, I want the person who did it to lose everything.",
+      "hook_speaker": "MAYA",
+      "cliffhanger_line": "L019",
+      "cliffhanger_text": "If my mother was murdered, I want the person who did it to lose everything.",
+      "cliffhanger_speaker": "MAYA",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L019) and closes on L019. Keyword signals: murdered, contract, everything. Spans 2 scene(s).",
+      "patterns": [
+        "Dramatic confrontation"
+      ],
+      "ai_scores": {
+        "hook_strength": 29.0,
+        "cliffhanger_strength": 22.0,
+        "emotional_impact": 19.0,
+        "standalone_clarity": 12.0
+      },
+      "editor_scores": {},
+      "overall": 82.0,
+      "rank": 3,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 29.0,
+        "cliffhanger_strength": 22.0,
+        "emotional_impact": 19.0,
+        "standalone_clarity": 12.0
+      },
+      "flags": []
+    },
+    {
+      "id": 117,
+      "run_id": 24,
+      "episode_id": 24,
       "episode_number": 4,
       "title": "Secret teased — Maya",
       "segments": [
@@ -351,9 +399,10 @@
       "cliffhanger_line": "L026",
       "cliffhanger_text": "Meera stood exactly where you're standing, Maya. The night before the fire. Shall I tell you what she said?",
       "cliffhanger_speaker": "NANDINI",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L019) and closes on L026 at a scene boundary. Keyword signals: murdered, fire, everything. Spans 1 scene(s).",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L019) and closes on L026 at a scene boundary. Keyword signals: murdered, who, fire. Spans 1 scene(s).",
       "patterns": [
         "Secret teased",
+        "Power struggle",
         "Past trauma"
       ],
       "ai_scores": {
@@ -364,15 +413,15 @@
       },
       "editor_scores": {},
       "overall": 81.0,
-      "rank": 3,
+      "rank": 4,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 29.0,
         "cliffhanger_strength": 26.0,
@@ -382,9 +431,9 @@
       "flags": []
     },
     {
-      "id": 81,
-      "run_id": 17,
-      "episode_id": 17,
+      "id": 106,
+      "run_id": 22,
+      "episode_id": 22,
       "episode_number": 2,
       "title": "Return from the dead — Savitri",
       "segments": [
@@ -461,15 +510,15 @@
       },
       "editor_scores": {},
       "overall": 78.0,
-      "rank": 4,
+      "rank": 5,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 25.0,
         "cliffhanger_strength": 22.0,
@@ -479,9 +528,456 @@
       "flags": []
     },
     {
-      "id": 92,
-      "run_id": 19,
-      "episode_id": 19,
+      "id": 123,
+      "run_id": 25,
+      "episode_id": 25,
+      "episode_number": 5,
+      "title": "Return from the dead — Rhea",
+      "segments": [
+        {
+          "start_line_id": "L019",
+          "end_line_id": "L028",
+          "start": "01:34",
+          "end": "02:32",
+          "start_s": 94.0,
+          "end_s": 152.0,
+          "duration_s": 58.0,
+          "claimed_start": "01:34",
+          "claimed_end": "02:32",
+          "scenes": [
+            2,
+            3
+          ],
+          "lines": [
+            {
+              "id": "L019",
+              "kind": "dialogue",
+              "character": "NANDINI",
+              "text": "You'd destroy your own mother for her? For a waitress?",
+              "start": "01:34",
+              "end": "01:39"
+            },
+            {
+              "id": "L020",
+              "kind": "dialogue",
+              "character": "RHEA",
+              "text": "No. For the sister you made me hate.",
+              "start": "01:39",
+              "end": "01:44"
+            },
+            {
+              "id": "L021",
+              "kind": "action",
+              "character": null,
+              "text": "Police cars line the driveway. Two officers lead Nandini out in handcuffs.",
+              "start": "01:44",
+              "end": "01:50"
+            },
+            {
+              "id": "L022",
+              "kind": "dialogue",
+              "character": "NANDINI",
+              "text": "This isn't over, Maya. You have no idea who pulled you out of that fire.",
+              "start": "01:50",
+              "end": "01:55"
+            },
+            {
+              "id": "L023",
+              "kind": "action",
+              "character": null,
+              "text": "Maya freezes. Nandini is pushed into the car.",
+              "start": "01:55",
+              "end": "02:00"
+            },
+            {
+              "id": "L024",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "What did she mean? Who saved me?",
+              "start": "02:00",
+              "end": "02:06"
+            },
+            {
+              "id": "L025",
+              "kind": "action",
+              "character": null,
+              "text": "Savitri wheels forward. She looks at Maya, then at the gates, guilt written across her face.",
+              "start": "02:06",
+              "end": "02:12"
+            },
+            {
+              "id": "L026",
+              "kind": "dialogue",
+              "character": "SAVITRI",
+              "text": "There is one more secret in this family, child. And it is mine.",
+              "start": "02:12",
+              "end": "02:18"
+            },
+            {
+              "id": "L027",
+              "kind": "action",
+              "character": null,
+              "text": "A motorbike stops at the gates. A rider in a black helmet watches them.",
+              "start": "02:18",
+              "end": "02:24"
+            },
+            {
+              "id": "L028",
+              "kind": "action",
+              "character": null,
+              "text": "The rider lifts the visor. It is a woman, older, with Maya's eyes. Meera. Alive.",
+              "start": "02:24",
+              "end": "02:32"
+            }
+          ]
+        }
+      ],
+      "start_ts": "01:34",
+      "end_ts": "02:32",
+      "start_s": 94.0,
+      "end_s": 152.0,
+      "duration_s": 58.0,
+      "hook_line": "L020",
+      "hook_text": "No. For the sister you made me hate.",
+      "hook_speaker": "RHEA",
+      "cliffhanger_line": "L028",
+      "cliffhanger_text": "The rider lifts the visor. It is a woman, older, with Maya's eyes. Meera. Alive.",
+      "cliffhanger_speaker": null,
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L020) and closes on L028 at a scene boundary. Keyword signals: secret, sister, alive. Spans 2 scene(s).",
+      "patterns": [
+        "Return from the dead",
+        "Villain downfall",
+        "Secret teased"
+      ],
+      "ai_scores": {
+        "hook_strength": 25.0,
+        "cliffhanger_strength": 28.0,
+        "emotional_impact": 15.0,
+        "standalone_clarity": 10.0
+      },
+      "editor_scores": {},
+      "overall": 78.0,
+      "rank": 6,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 25.0,
+        "cliffhanger_strength": 28.0,
+        "emotional_impact": 15.0,
+        "standalone_clarity": 10.0
+      },
+      "flags": []
+    },
+    {
+      "id": 101,
+      "run_id": 21,
+      "episode_id": 21,
+      "episode_number": 1,
+      "title": "Return from the dead — Maya",
+      "segments": [
+        {
+          "start_line_id": "L011",
+          "end_line_id": "L015",
+          "start": "00:00:47",
+          "end": "00:01:11",
+          "start_s": 47.0,
+          "end_s": 71.0,
+          "duration_s": 24.0,
+          "claimed_start": "00:00:47",
+          "claimed_end": "00:01:11",
+          "scenes": [
+            1,
+            2
+          ],
+          "lines": [
+            {
+              "id": "L011",
+              "kind": "dialogue",
+              "character": "RHEA",
+              "text": "Oh dear. Someone get the help out of the way, please.",
+              "start": "00:00:47",
+              "end": "00:00:52"
+            },
+            {
+              "id": "L012",
+              "kind": "action",
+              "character": null,
+              "text": "Maya presses her back to the wall, gasping, clutching the locket.",
+              "start": "00:00:52",
+              "end": "00:00:57"
+            },
+            {
+              "id": "L013",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "Five years. They told me he died in that fire.",
+              "start": "00:00:57",
+              "end": "00:01:02"
+            },
+            {
+              "id": "L014",
+              "kind": "action",
+              "character": null,
+              "text": "Footsteps. Vikram rounds the corner, alone. He stops dead.",
+              "start": "00:01:02",
+              "end": "00:01:07"
+            },
+            {
+              "id": "L015",
+              "kind": "dialogue",
+              "character": "VIKRAM",
+              "text": "Maya? You... you're alive.",
+              "start": "00:01:07",
+              "end": "00:01:11"
+            }
+          ]
+        }
+      ],
+      "start_ts": "00:00:47",
+      "end_ts": "00:01:11",
+      "start_s": 47.0,
+      "end_s": 71.0,
+      "duration_s": 24.0,
+      "hook_line": "L013",
+      "hook_text": "Five years. They told me he died in that fire.",
+      "hook_speaker": "MAYA",
+      "cliffhanger_line": "L015",
+      "cliffhanger_text": "Maya? You... you're alive.",
+      "cliffhanger_speaker": "VIKRAM",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L013) and closes on L015. Keyword signals: alive, died, dead. Spans 2 scene(s).",
+      "patterns": [
+        "Return from the dead",
+        "Past trauma"
+      ],
+      "ai_scores": {
+        "hook_strength": 23.0,
+        "cliffhanger_strength": 29.0,
+        "emotional_impact": 13.0,
+        "standalone_clarity": 12.0
+      },
+      "editor_scores": {},
+      "overall": 77.0,
+      "rank": 7,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 23.0,
+        "cliffhanger_strength": 29.0,
+        "emotional_impact": 13.0,
+        "standalone_clarity": 12.0
+      },
+      "flags": []
+    },
+    {
+      "id": 111,
+      "run_id": 23,
+      "episode_id": 23,
+      "episode_number": 3,
+      "title": "Forgery exposed",
+      "segments": [
+        {
+          "start_line_id": "L013",
+          "end_line_id": "L016",
+          "start": "00:00:56",
+          "end": "00:01:17",
+          "start_s": 56.0,
+          "end_s": 77.0,
+          "duration_s": 21.0,
+          "claimed_start": "00:00:56",
+          "claimed_end": "00:01:17",
+          "scenes": [
+            2
+          ],
+          "lines": [
+            {
+              "id": "L013",
+              "kind": "action",
+              "character": null,
+              "text": "The guards push Maya down the steps. Her locket snaps and skitters across the stone.",
+              "start": "00:00:56",
+              "end": "00:01:01"
+            },
+            {
+              "id": "L014",
+              "kind": "action",
+              "character": null,
+              "text": "Rhea descends behind her and grinds the locket under her heel.",
+              "start": "00:01:01",
+              "end": "00:01:06"
+            },
+            {
+              "id": "L015",
+              "kind": "dialogue",
+              "character": "RHEA",
+              "text": "You almost had them, didn't you? Go back to carrying trays, sweetheart.",
+              "start": "00:01:06",
+              "end": "00:01:12"
+            },
+            {
+              "id": "L016",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "You forged it. I know you did. And I will prove it.",
+              "start": "00:01:12",
+              "end": "00:01:17"
+            }
+          ]
+        }
+      ],
+      "start_ts": "00:00:56",
+      "end_ts": "00:01:17",
+      "start_s": 56.0,
+      "end_s": 77.0,
+      "duration_s": 21.0,
+      "hook_line": "L013",
+      "hook_text": "The guards push Maya down the steps. Her locket snaps and skitters across the stone.",
+      "hook_speaker": null,
+      "cliffhanger_line": "L016",
+      "cliffhanger_text": "You forged it. I know you did. And I will prove it.",
+      "cliffhanger_speaker": "MAYA",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L013) and closes on L016. Keyword signals: forged, guards, prove. Spans 1 scene(s).",
+      "patterns": [
+        "Forgery exposed",
+        "Power struggle"
+      ],
+      "ai_scores": {
+        "hook_strength": 20.0,
+        "cliffhanger_strength": 22.0,
+        "emotional_impact": 16.0,
+        "standalone_clarity": 19.0
+      },
+      "editor_scores": {},
+      "overall": 77.0,
+      "rank": 8,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 20.0,
+        "cliffhanger_strength": 22.0,
+        "emotional_impact": 16.0,
+        "standalone_clarity": 19.0
+      },
+      "flags": []
+    },
+    {
+      "id": 112,
+      "run_id": 23,
+      "episode_id": 23,
+      "episode_number": 3,
+      "title": "Accusation of lies — Savitri",
+      "segments": [
+        {
+          "start_line_id": "L007",
+          "end_line_id": "L010",
+          "start": "00:00:30",
+          "end": "00:00:51",
+          "start_s": 30.0,
+          "end_s": 51.0,
+          "duration_s": 21.0,
+          "claimed_start": "00:00:30",
+          "claimed_end": "00:00:51",
+          "scenes": [
+            1
+          ],
+          "lines": [
+            {
+              "id": "L007",
+              "kind": "dialogue",
+              "character": "SAVITRI",
+              "text": "Zero percent match. You are not my blood.",
+              "start": "00:00:30",
+              "end": "00:00:35"
+            },
+            {
+              "id": "L008",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "That's a lie. Somebody changed those results.",
+              "start": "00:00:35",
+              "end": "00:00:40"
+            },
+            {
+              "id": "L009",
+              "kind": "dialogue",
+              "character": "NANDINI",
+              "text": "Security will escort you out. Leave the uniform; it belongs to the hotel.",
+              "start": "00:00:40",
+              "end": "00:00:45"
+            },
+            {
+              "id": "L010",
+              "kind": "action",
+              "character": null,
+              "text": "Two guards step forward and grip Maya's arms. Vikram half-rises from his chair.",
+              "start": "00:00:45",
+              "end": "00:00:51"
+            }
+          ]
+        }
+      ],
+      "start_ts": "00:00:30",
+      "end_ts": "00:00:51",
+      "start_s": 30.0,
+      "end_s": 51.0,
+      "duration_s": 21.0,
+      "hook_line": "L007",
+      "hook_text": "Zero percent match. You are not my blood.",
+      "hook_speaker": "SAVITRI",
+      "cliffhanger_line": "L010",
+      "cliffhanger_text": "Two guards step forward and grip Maya's arms. Vikram half-rises from his chair.",
+      "cliffhanger_speaker": null,
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L007) and closes on L010. Keyword signals: blood, lie, guards. Spans 1 scene(s).",
+      "patterns": [
+        "Accusation of lies",
+        "Power struggle"
+      ],
+      "ai_scores": {
+        "hook_strength": 25.0,
+        "cliffhanger_strength": 17.0,
+        "emotional_impact": 16.0,
+        "standalone_clarity": 16.0
+      },
+      "editor_scores": {},
+      "overall": 74.0,
+      "rank": 9,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 25.0,
+        "cliffhanger_strength": 17.0,
+        "emotional_impact": 16.0,
+        "standalone_clarity": 16.0
+      },
+      "flags": []
+    },
+    {
+      "id": 118,
+      "run_id": 24,
+      "episode_id": 24,
       "episode_number": 4,
       "title": "Dramatic confrontation — Maya",
       "segments": [
@@ -557,15 +1053,15 @@
       },
       "editor_scores": {},
       "overall": 74.0,
-      "rank": 5,
+      "rank": 10,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 25.0,
         "cliffhanger_strength": 18.0,
@@ -575,9 +1071,9 @@
       "flags": []
     },
     {
-      "id": 98,
-      "run_id": 20,
-      "episode_id": 20,
+      "id": 124,
+      "run_id": 25,
+      "episode_id": 25,
       "episode_number": 5,
       "title": "Forgery exposed — Rhea",
       "segments": [
@@ -638,8 +1134,8 @@
           ]
         }
       ],
-      "start_ts": "00:00:52",
-      "end_ts": "00:01:18",
+      "start_ts": "00:52",
+      "end_ts": "01:18",
       "start_s": 52.0,
       "end_s": 78.0,
       "duration_s": 26.0,
@@ -649,7 +1145,7 @@
       "cliffhanger_line": "L015",
       "cliffhanger_text": "I know you used Dadi's signature stamp. I know you chained the door the night of the fire.",
       "cliffhanger_speaker": "RHEA",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L012) and closes on L015. Keyword signals: chained, forge, daughter. Spans 1 scene(s).",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L012) and closes on L015. Keyword signals: forge, chained, daughter. Spans 1 scene(s).",
       "patterns": [
         "Forgery exposed",
         "Hidden lineage reveal",
@@ -663,15 +1159,15 @@
       },
       "editor_scores": {},
       "overall": 74.0,
-      "rank": 6,
+      "rank": 11,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 21.0,
         "cliffhanger_strength": 22.0,
@@ -681,9 +1177,9 @@
       "flags": []
     },
     {
-      "id": 76,
-      "run_id": 16,
-      "episode_id": 16,
+      "id": 102,
+      "run_id": 21,
+      "episode_id": 21,
       "episode_number": 1,
       "title": "Return from the dead — Vikram",
       "segments": [
@@ -769,15 +1265,15 @@
       },
       "editor_scores": {},
       "overall": 73.0,
-      "rank": 7,
+      "rank": 12,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 30.0,
         "cliffhanger_strength": 13.0,
@@ -789,341 +1285,42 @@
       ]
     },
     {
-      "id": 77,
-      "run_id": 16,
-      "episode_id": 16,
-      "episode_number": 1,
-      "title": "Return from the dead — Maya",
-      "segments": [
-        {
-          "start_line_id": "L009",
-          "end_line_id": "L015",
-          "start": "00:00:38",
-          "end": "00:01:11",
-          "start_s": 38.0,
-          "end_s": 71.0,
-          "duration_s": 33.0,
-          "claimed_start": "00:00:38",
-          "claimed_end": "00:01:11",
-          "scenes": [
-            1,
-            2
-          ],
-          "lines": [
-            {
-              "id": "L009",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "No. No, that's impossible.",
-              "start": "00:00:38",
-              "end": "00:00:42"
-            },
-            {
-              "id": "L010",
-              "kind": "action",
-              "character": null,
-              "text": "The tray crashes to the marble floor. Every head turns toward her.",
-              "start": "00:00:42",
-              "end": "00:00:47"
-            },
-            {
-              "id": "L011",
-              "kind": "dialogue",
-              "character": "RHEA",
-              "text": "Oh dear. Someone get the help out of the way, please.",
-              "start": "00:00:47",
-              "end": "00:00:52"
-            },
-            {
-              "id": "L012",
-              "kind": "action",
-              "character": null,
-              "text": "Maya presses her back to the wall, gasping, clutching the locket.",
-              "start": "00:00:52",
-              "end": "00:00:57"
-            },
-            {
-              "id": "L013",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "Five years. They told me he died in that fire.",
-              "start": "00:00:57",
-              "end": "00:01:02"
-            },
-            {
-              "id": "L014",
-              "kind": "action",
-              "character": null,
-              "text": "Footsteps. Vikram rounds the corner, alone. He stops dead.",
-              "start": "00:01:02",
-              "end": "00:01:07"
-            },
-            {
-              "id": "L015",
-              "kind": "dialogue",
-              "character": "VIKRAM",
-              "text": "Maya? You... you're alive.",
-              "start": "00:01:07",
-              "end": "00:01:11"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:00:38",
-      "end_ts": "00:01:11",
-      "start_s": 38.0,
-      "end_s": 71.0,
-      "duration_s": 33.0,
-      "hook_line": "L009",
-      "hook_text": "No. No, that's impossible.",
-      "hook_speaker": "MAYA",
-      "cliffhanger_line": "L015",
-      "cliffhanger_text": "Maya? You... you're alive.",
-      "cliffhanger_speaker": "VIKRAM",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L009) and closes on L015. Keyword signals: alive, impossible, dead. Spans 2 scene(s).",
-      "patterns": [
-        "Return from the dead",
-        "Past trauma"
-      ],
-      "ai_scores": {
-        "hook_strength": 19.0,
-        "cliffhanger_strength": 29.0,
-        "emotional_impact": 13.0,
-        "standalone_clarity": 12.0
-      },
-      "editor_scores": {},
-      "overall": 73.0,
-      "rank": 8,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 19.0,
-        "cliffhanger_strength": 29.0,
-        "emotional_impact": 13.0,
-        "standalone_clarity": 12.0
-      },
-      "flags": []
-    },
-    {
-      "id": 93,
-      "run_id": 19,
-      "episode_id": 19,
-      "episode_number": 4,
-      "title": "Dramatic confrontation",
-      "segments": [
-        {
-          "start_line_id": "L017",
-          "end_line_id": "L019",
-          "start": "00:01:25",
-          "end": "00:01:45",
-          "start_s": 85.0,
-          "end_s": 105.0,
-          "duration_s": 20.0,
-          "claimed_start": "00:01:25",
-          "claimed_end": "00:01:45",
-          "scenes": [
-            2,
-            3
-          ],
-          "lines": [
-            {
-              "id": "L017",
-              "kind": "dialogue",
-              "character": "NANDINI (V.O.)",
-              "text": "You were never going to have him. He was a contract. Now do as I say.",
-              "start": "00:01:25",
-              "end": "00:01:32"
-            },
-            {
-              "id": "L018",
-              "kind": "action",
-              "character": null,
-              "text": "Rhea lowers the phone, shaking. For the first time, she looks afraid of her own mother.",
-              "start": "00:01:32",
-              "end": "00:01:40"
-            },
-            {
-              "id": "L019",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "If my mother was murdered, I want the person who did it to lose everything.",
-              "start": "00:01:40",
-              "end": "00:01:45"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:01:25",
-      "end_ts": "00:01:45",
-      "start_s": 85.0,
-      "end_s": 105.0,
-      "duration_s": 20.0,
-      "hook_line": "L018",
-      "hook_text": "Rhea lowers the phone, shaking. For the first time, she looks afraid of her own mother.",
-      "hook_speaker": null,
-      "cliffhanger_line": "L019",
-      "cliffhanger_text": "If my mother was murdered, I want the person who did it to lose everything.",
-      "cliffhanger_speaker": "MAYA",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L018) and closes on L019. Keyword signals: murdered, contract, everything. Spans 2 scene(s).",
-      "patterns": [
-        "Dramatic confrontation"
-      ],
-      "ai_scores": {
-        "hook_strength": 20.0,
-        "cliffhanger_strength": 22.0,
-        "emotional_impact": 19.0,
-        "standalone_clarity": 12.0
-      },
-      "editor_scores": {},
-      "overall": 73.0,
-      "rank": 9,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 20.0,
-        "cliffhanger_strength": 22.0,
-        "emotional_impact": 19.0,
-        "standalone_clarity": 12.0
-      },
-      "flags": []
-    },
-    {
-      "id": 82,
-      "run_id": 17,
-      "episode_id": 17,
-      "episode_number": 2,
-      "title": "Past trauma — Maya",
-      "segments": [
-        {
-          "start_line_id": "L017",
-          "end_line_id": "L021",
-          "start": "00:01:22",
-          "end": "00:01:50",
-          "start_s": 82.0,
-          "end_s": 110.0,
-          "duration_s": 28.0,
-          "claimed_start": "00:01:22",
-          "claimed_end": "00:01:50",
-          "scenes": [
-            2
-          ],
-          "lines": [
-            {
-              "id": "L017",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "So you can finish what the fire started?",
-              "start": "00:01:22",
-              "end": "00:01:27"
-            },
-            {
-              "id": "L018",
-              "kind": "dialogue",
-              "character": "VIKRAM",
-              "text": "I didn't lock that door, Maya. Someone locked it from the outside. Someone in this family.",
-              "start": "00:01:27",
-              "end": "00:01:33"
-            },
-            {
-              "id": "L019",
-              "kind": "action",
-              "character": null,
-              "text": "Maya hesitates. For the first time, doubt flickers across her face.",
-              "start": "00:01:33",
-              "end": "00:01:38"
-            },
-            {
-              "id": "L020",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "Then why didn't you come back for me?",
-              "start": "00:01:38",
-              "end": "00:01:44"
-            },
-            {
-              "id": "L021",
-              "kind": "dialogue",
-              "character": "VIKRAM",
-              "text": "Because they told me you were dead. And they showed me a body.",
-              "start": "00:01:44",
-              "end": "00:01:50"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:01:22",
-      "end_ts": "00:01:50",
-      "start_s": 82.0,
-      "end_s": 110.0,
-      "duration_s": 28.0,
-      "hook_line": "L017",
-      "hook_text": "So you can finish what the fire started?",
-      "hook_speaker": "MAYA",
-      "cliffhanger_line": "L021",
-      "cliffhanger_text": "Because they told me you were dead. And they showed me a body.",
-      "cliffhanger_speaker": "VIKRAM",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L017) and closes on L021 at a scene boundary. Keyword signals: locked, dead, body. Spans 1 scene(s).",
-      "patterns": [
-        "Past trauma"
-      ],
-      "ai_scores": {
-        "hook_strength": 21.0,
-        "cliffhanger_strength": 23.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
-      },
-      "editor_scores": {},
-      "overall": 72.0,
-      "rank": 10,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 21.0,
-        "cliffhanger_strength": 23.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
-      },
-      "flags": []
-    },
-    {
-      "id": 83,
-      "run_id": 17,
-      "episode_id": 17,
+      "id": 107,
+      "run_id": 22,
+      "episode_id": 22,
       "episode_number": 2,
       "title": "Dramatic confrontation — Nandini",
       "segments": [
         {
-          "start_line_id": "L024",
+          "start_line_id": "L022",
           "end_line_id": "L030",
-          "start": "00:02:01",
+          "start": "00:01:50",
           "end": "00:02:38",
-          "start_s": 121.0,
+          "start_s": 110.0,
           "end_s": 158.0,
-          "duration_s": 37.0,
-          "claimed_start": "00:02:01",
+          "duration_s": 48.0,
+          "claimed_start": "00:01:50",
           "claimed_end": "00:02:38",
           "scenes": [
             3
           ],
           "lines": [
+            {
+              "id": "L022",
+              "kind": "action",
+              "character": null,
+              "text": "Nandini paces. Rhea sits on the desk, scrolling her phone.",
+              "start": "00:01:50",
+              "end": "00:01:55"
+            },
+            {
+              "id": "L023",
+              "kind": "dialogue",
+              "character": "RHEA",
+              "text": "Relax, Mumma. A DNA test takes three days. We have time.",
+              "start": "00:01:55",
+              "end": "00:02:01"
+            },
             {
               "id": "L024",
               "kind": "dialogue",
@@ -1183,11 +1380,11 @@
           ]
         }
       ],
-      "start_ts": "00:02:01",
+      "start_ts": "00:01:50",
       "end_ts": "00:02:38",
-      "start_s": 121.0,
+      "start_s": 110.0,
       "end_s": 158.0,
-      "duration_s": 37.0,
+      "duration_s": 48.0,
       "hook_line": "L024",
       "hook_text": "You don't understand. If she is Meera's girl, the will gives her everything. Everything.",
       "hook_speaker": "NANDINI",
@@ -1201,203 +1398,11 @@
       "ai_scores": {
         "hook_strength": 23.0,
         "cliffhanger_strength": 21.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
-      },
-      "editor_scores": {},
-      "overall": 72.0,
-      "rank": 11,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 23.0,
-        "cliffhanger_strength": 21.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
-      },
-      "flags": []
-    },
-    {
-      "id": 86,
-      "run_id": 18,
-      "episode_id": 18,
-      "episode_number": 3,
-      "title": "Forgery exposed",
-      "segments": [
-        {
-          "start_line_id": "L013",
-          "end_line_id": "L016",
-          "start": "00:00:56",
-          "end": "00:01:17",
-          "start_s": 56.0,
-          "end_s": 77.0,
-          "duration_s": 21.0,
-          "claimed_start": "00:00:56",
-          "claimed_end": "00:01:17",
-          "scenes": [
-            2
-          ],
-          "lines": [
-            {
-              "id": "L013",
-              "kind": "action",
-              "character": null,
-              "text": "The guards push Maya down the steps. Her locket snaps and skitters across the stone.",
-              "start": "00:00:56",
-              "end": "00:01:01"
-            },
-            {
-              "id": "L014",
-              "kind": "action",
-              "character": null,
-              "text": "Rhea descends behind her and grinds the locket under her heel.",
-              "start": "00:01:01",
-              "end": "00:01:06"
-            },
-            {
-              "id": "L015",
-              "kind": "dialogue",
-              "character": "RHEA",
-              "text": "You almost had them, didn't you? Go back to carrying trays, sweetheart.",
-              "start": "00:01:06",
-              "end": "00:01:12"
-            },
-            {
-              "id": "L016",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "You forged it. I know you did. And I will prove it.",
-              "start": "00:01:12",
-              "end": "00:01:17"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:00:56",
-      "end_ts": "00:01:17",
-      "start_s": 56.0,
-      "end_s": 77.0,
-      "duration_s": 21.0,
-      "hook_line": "L013",
-      "hook_text": "The guards push Maya down the steps. Her locket snaps and skitters across the stone.",
-      "hook_speaker": null,
-      "cliffhanger_line": "L016",
-      "cliffhanger_text": "You forged it. I know you did. And I will prove it.",
-      "cliffhanger_speaker": "MAYA",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L013) and closes on L016. Keyword signals: forged, prove, know. Spans 1 scene(s).",
-      "patterns": [
-        "Forgery exposed"
-      ],
-      "ai_scores": {
-        "hook_strength": 16.0,
-        "cliffhanger_strength": 22.0,
-        "emotional_impact": 14.0,
+        "emotional_impact": 10.0,
         "standalone_clarity": 19.0
       },
       "editor_scores": {},
-      "overall": 71.0,
-      "rank": 12,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 16.0,
-        "cliffhanger_strength": 22.0,
-        "emotional_impact": 14.0,
-        "standalone_clarity": 19.0
-      },
-      "flags": []
-    },
-    {
-      "id": 87,
-      "run_id": 18,
-      "episode_id": 18,
-      "episode_number": 3,
-      "title": "Accusation of lies — Maya",
-      "segments": [
-        {
-          "start_line_id": "L008",
-          "end_line_id": "L011",
-          "start": "00:00:35",
-          "end": "00:00:56",
-          "start_s": 35.0,
-          "end_s": 56.0,
-          "duration_s": 21.0,
-          "claimed_start": "00:00:35",
-          "claimed_end": "00:00:56",
-          "scenes": [
-            1
-          ],
-          "lines": [
-            {
-              "id": "L008",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "That's a lie. Somebody changed those results.",
-              "start": "00:00:35",
-              "end": "00:00:40"
-            },
-            {
-              "id": "L009",
-              "kind": "dialogue",
-              "character": "NANDINI",
-              "text": "Security will escort you out. Leave the uniform; it belongs to the hotel.",
-              "start": "00:00:40",
-              "end": "00:00:45"
-            },
-            {
-              "id": "L010",
-              "kind": "action",
-              "character": null,
-              "text": "Two guards step forward and grip Maya's arms. Vikram half-rises from his chair.",
-              "start": "00:00:45",
-              "end": "00:00:51"
-            },
-            {
-              "id": "L011",
-              "kind": "dialogue",
-              "character": "VIKRAM",
-              "text": "Dadi, wait. At least let her—",
-              "start": "00:00:51",
-              "end": "00:00:56"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:00:35",
-      "end_ts": "00:00:56",
-      "start_s": 35.0,
-      "end_s": 56.0,
-      "duration_s": 21.0,
-      "hook_line": "L008",
-      "hook_text": "That's a lie. Somebody changed those results.",
-      "hook_speaker": "MAYA",
-      "cliffhanger_line": "L011",
-      "cliffhanger_text": "Dadi, wait. At least let her—",
-      "cliffhanger_speaker": "VIKRAM",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L008) and closes on L011 at a scene boundary. Keyword signals: lie, results, will. Spans 1 scene(s).",
-      "patterns": [
-        "Accusation of lies"
-      ],
-      "ai_scores": {
-        "hook_strength": 23.0,
-        "cliffhanger_strength": 18.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
-      },
-      "editor_scores": {},
-      "overall": 69.0,
+      "overall": 73.0,
       "rank": 13,
       "validation_status": "valid",
       "validation_errors": [],
@@ -1405,20 +1410,164 @@
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 23.0,
-        "cliffhanger_strength": 18.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 16.0
+        "cliffhanger_strength": 21.0,
+        "emotional_impact": 10.0,
+        "standalone_clarity": 19.0
       },
       "flags": []
     },
     {
-      "id": 84,
-      "run_id": 17,
-      "episode_id": 17,
+      "id": 108,
+      "run_id": 22,
+      "episode_id": 22,
+      "episode_number": 2,
+      "title": "Past trauma — Maya",
+      "segments": [
+        {
+          "start_line_id": "L012",
+          "end_line_id": "L021",
+          "start": "00:00:58",
+          "end": "00:01:50",
+          "start_s": 58.0,
+          "end_s": 110.0,
+          "duration_s": 52.0,
+          "claimed_start": "00:00:58",
+          "claimed_end": "00:01:50",
+          "scenes": [
+            2
+          ],
+          "lines": [
+            {
+              "id": "L012",
+              "kind": "action",
+              "character": null,
+              "text": "Maya pulls a sheet off a vanity mirror. A photo is tucked into the frame.",
+              "start": "00:00:58",
+              "end": "00:01:03"
+            },
+            {
+              "id": "L013",
+              "kind": "action",
+              "character": null,
+              "text": "The photo shows her mother, pregnant, standing beside a young NANDINI.",
+              "start": "00:01:03",
+              "end": "00:01:08"
+            },
+            {
+              "id": "L014",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "You knew her. You knew me.",
+              "start": "00:01:08",
+              "end": "00:01:12"
+            },
+            {
+              "id": "L015",
+              "kind": "action",
+              "character": null,
+              "text": "A knock. Vikram slips inside and closes the door behind him.",
+              "start": "00:01:12",
+              "end": "00:01:17"
+            },
+            {
+              "id": "L016",
+              "kind": "dialogue",
+              "character": "VIKRAM",
+              "text": "You need to leave this house tonight. Before the test.",
+              "start": "00:01:17",
+              "end": "00:01:22"
+            },
+            {
+              "id": "L017",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "So you can finish what the fire started?",
+              "start": "00:01:22",
+              "end": "00:01:27"
+            },
+            {
+              "id": "L018",
+              "kind": "dialogue",
+              "character": "VIKRAM",
+              "text": "I didn't lock that door, Maya. Someone locked it from the outside. Someone in this family.",
+              "start": "00:01:27",
+              "end": "00:01:33"
+            },
+            {
+              "id": "L019",
+              "kind": "action",
+              "character": null,
+              "text": "Maya hesitates. For the first time, doubt flickers across her face.",
+              "start": "00:01:33",
+              "end": "00:01:38"
+            },
+            {
+              "id": "L020",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "Then why didn't you come back for me?",
+              "start": "00:01:38",
+              "end": "00:01:44"
+            },
+            {
+              "id": "L021",
+              "kind": "dialogue",
+              "character": "VIKRAM",
+              "text": "Because they told me you were dead. And they showed me a body.",
+              "start": "00:01:44",
+              "end": "00:01:50"
+            }
+          ]
+        }
+      ],
+      "start_ts": "00:00:58",
+      "end_ts": "00:01:50",
+      "start_s": 58.0,
+      "end_s": 110.0,
+      "duration_s": 52.0,
+      "hook_line": "L014",
+      "hook_text": "You knew her. You knew me.",
+      "hook_speaker": "MAYA",
+      "cliffhanger_line": "L021",
+      "cliffhanger_text": "Because they told me you were dead. And they showed me a body.",
+      "cliffhanger_speaker": "VIKRAM",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L014) and closes on L021 at a scene boundary. Keyword signals: body, dead, locked. Spans 1 scene(s).",
+      "patterns": [
+        "Past trauma"
+      ],
+      "ai_scores": {
+        "hook_strength": 21.0,
+        "cliffhanger_strength": 23.0,
+        "emotional_impact": 10.0,
+        "standalone_clarity": 19.0
+      },
+      "editor_scores": {},
+      "overall": 73.0,
+      "rank": 14,
+      "validation_status": "valid",
+      "validation_errors": [],
+      "review_status": "pending",
+      "review_notes": null,
+      "provider": "heuristic",
+      "model": "keyword-baseline-v1",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
+      "scores": {
+        "hook_strength": 21.0,
+        "cliffhanger_strength": 23.0,
+        "emotional_impact": 10.0,
+        "standalone_clarity": 19.0
+      },
+      "flags": []
+    },
+    {
+      "id": 109,
+      "run_id": 22,
+      "episode_id": 22,
       "episode_number": 2,
       "title": "Return from the dead — Maya",
       "segments": [
@@ -1510,15 +1659,15 @@
       },
       "editor_scores": {},
       "overall": 68.0,
-      "rank": 14,
+      "rank": 15,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 29.0,
         "cliffhanger_strength": 12.0,
@@ -1530,9 +1679,9 @@
       ]
     },
     {
-      "id": 88,
-      "run_id": 18,
-      "episode_id": 18,
+      "id": 113,
+      "run_id": 23,
+      "episode_id": 23,
       "episode_number": 3,
       "title": "Hidden lineage reveal — Gita",
       "segments": [
@@ -1604,7 +1753,7 @@
       "cliffhanger_line": "L026",
       "cliffhanger_text": "Madam Malhotra? I... I can explain. Your granddaughter threatened me.",
       "cliffhanger_speaker": "LAB DIRECTOR (V.O.)",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L022) and closes on L026. Keyword signals: granddaughter, favour, results. Spans 1 scene(s).",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L022) and closes on L026. Keyword signals: granddaughter, results, favour. Spans 1 scene(s).",
       "patterns": [
         "Hidden lineage reveal"
       ],
@@ -1616,15 +1765,15 @@
       },
       "editor_scores": {},
       "overall": 68.0,
-      "rank": 15,
+      "rank": 16,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 21.0,
         "cliffhanger_strength": 20.0,
@@ -1634,106 +1783,105 @@
       "flags": []
     },
     {
-      "id": 85,
-      "run_id": 17,
-      "episode_id": 17,
-      "episode_number": 2,
-      "title": "Dramatic confrontation — Vikram",
+      "id": 103,
+      "run_id": 21,
+      "episode_id": 21,
+      "episode_number": 1,
+      "title": "Hidden lineage reveal — Savitri",
       "segments": [
         {
-          "start_line_id": "L021",
-          "end_line_id": "L024",
-          "start": "00:01:44",
-          "end": "00:02:07",
-          "start_s": 104.0,
-          "end_s": 127.0,
+          "start_line_id": "L028",
+          "end_line_id": "L031",
+          "start": "00:02:11",
+          "end": "00:02:34",
+          "start_s": 131.0,
+          "end_s": 154.0,
           "duration_s": 23.0,
-          "claimed_start": "00:01:44",
-          "claimed_end": "00:02:07",
+          "claimed_start": "00:02:11",
+          "claimed_end": "00:02:34",
           "scenes": [
-            2,
             3
           ],
           "lines": [
             {
-              "id": "L021",
+              "id": "L028",
               "kind": "dialogue",
-              "character": "VIKRAM",
-              "text": "Because they told me you were dead. And they showed me a body.",
-              "start": "00:01:44",
-              "end": "00:01:50"
+              "character": "MAYA",
+              "text": "It's the only thing my mother left me. Why do you care?",
+              "start": "00:02:11",
+              "end": "00:02:16"
             },
             {
-              "id": "L022",
+              "id": "L029",
               "kind": "action",
               "character": null,
-              "text": "Nandini paces. Rhea sits on the desk, scrolling her phone.",
-              "start": "00:01:50",
-              "end": "00:01:55"
+              "text": "Savitri opens her own locket. Inside: the same photograph of a young woman.",
+              "start": "00:02:16",
+              "end": "00:02:22"
             },
             {
-              "id": "L023",
+              "id": "L030",
               "kind": "dialogue",
-              "character": "RHEA",
-              "text": "Relax, Mumma. A DNA test takes three days. We have time.",
-              "start": "00:01:55",
-              "end": "00:02:01"
+              "character": "SAVITRI",
+              "text": "Because the woman in that picture was my daughter. Which makes you a Malhotra.",
+              "start": "00:02:22",
+              "end": "00:02:28"
             },
             {
-              "id": "L024",
-              "kind": "dialogue",
-              "character": "NANDINI",
-              "text": "You don't understand. If she is Meera's girl, the will gives her everything. Everything.",
-              "start": "00:02:01",
-              "end": "00:02:07"
+              "id": "L031",
+              "kind": "action",
+              "character": null,
+              "text": "Maya stares, rain streaming down her face. Behind them, Vikram watches from the doorway.",
+              "start": "00:02:28",
+              "end": "00:02:34"
             }
           ]
         }
       ],
-      "start_ts": "00:01:44",
-      "end_ts": "00:02:07",
-      "start_s": 104.0,
-      "end_s": 127.0,
+      "start_ts": "00:02:11",
+      "end_ts": "00:02:34",
+      "start_s": 131.0,
+      "end_s": 154.0,
       "duration_s": 23.0,
-      "hook_line": "L021",
-      "hook_text": "Because they told me you were dead. And they showed me a body.",
-      "hook_speaker": "VIKRAM",
-      "cliffhanger_line": "L024",
-      "cliffhanger_text": "You don't understand. If she is Meera's girl, the will gives her everything. Everything.",
-      "cliffhanger_speaker": "NANDINI",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L021) and closes on L024. Keyword signals: dead, body, everything. Spans 2 scene(s).",
+      "hook_line": "L030",
+      "hook_text": "Because the woman in that picture was my daughter. Which makes you a Malhotra.",
+      "hook_speaker": "SAVITRI",
+      "cliffhanger_line": "L031",
+      "cliffhanger_text": "Maya stares, rain streaming down her face. Behind them, Vikram watches from the doorway.",
+      "cliffhanger_speaker": null,
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L030) and closes on L031 at a scene boundary. Keyword signals: daughter. Spans 1 scene(s).",
       "patterns": [
-        "Dramatic confrontation"
+        "Hidden lineage reveal"
       ],
       "ai_scores": {
-        "hook_strength": 25.0,
-        "cliffhanger_strength": 17.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 12.0
+        "hook_strength": 19.0,
+        "cliffhanger_strength": 21.0,
+        "emotional_impact": 10.0,
+        "standalone_clarity": 16.0
       },
       "editor_scores": {},
       "overall": 66.0,
-      "rank": 16,
+      "rank": 17,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
-        "hook_strength": 25.0,
-        "cliffhanger_strength": 17.0,
-        "emotional_impact": 12.0,
-        "standalone_clarity": 12.0
+        "hook_strength": 19.0,
+        "cliffhanger_strength": 21.0,
+        "emotional_impact": 10.0,
+        "standalone_clarity": 16.0
       },
       "flags": []
     },
     {
-      "id": 89,
-      "run_id": 18,
-      "episode_id": 18,
+      "id": 114,
+      "run_id": 23,
+      "episode_id": 23,
       "episode_number": 3,
       "title": "Hidden lineage reveal — Lab Director (V.O.)",
       "segments": [
@@ -1818,15 +1966,15 @@
       },
       "editor_scores": {},
       "overall": 66.0,
-      "rank": 17,
+      "rank": 18,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 23.0,
         "cliffhanger_strength": 19.0,
@@ -1836,9 +1984,9 @@
       "flags": []
     },
     {
-      "id": 90,
-      "run_id": 18,
-      "episode_id": 18,
+      "id": 115,
+      "run_id": 23,
+      "episode_id": 23,
       "episode_number": 3,
       "title": "Forgery exposed — Maya",
       "segments": [
@@ -1930,15 +2078,15 @@
       },
       "editor_scores": {},
       "overall": 66.0,
-      "rank": 18,
+      "rank": 19,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 29.0,
         "cliffhanger_strength": 10.0,
@@ -1950,113 +2098,105 @@
       ]
     },
     {
-      "id": 78,
-      "run_id": 16,
-      "episode_id": 16,
-      "episode_number": 1,
-      "title": "Hidden lineage reveal — Savitri",
+      "id": 110,
+      "run_id": 22,
+      "episode_id": 22,
+      "episode_number": 2,
+      "title": "Hidden lineage reveal — Nandini",
       "segments": [
         {
-          "start_line_id": "L027",
-          "end_line_id": "L031",
-          "start": "00:02:06",
-          "end": "00:02:34",
-          "start_s": 126.0,
-          "end_s": 154.0,
-          "duration_s": 28.0,
-          "claimed_start": "00:02:06",
-          "claimed_end": "00:02:34",
+          "start_line_id": "L001",
+          "end_line_id": "L004",
+          "start": "00:00:00",
+          "end": "00:00:21",
+          "start_s": 0.0,
+          "end_s": 21.0,
+          "duration_s": 21.0,
+          "claimed_start": "00:00:00",
+          "claimed_end": "00:00:21",
           "scenes": [
-            3
+            1
           ],
           "lines": [
             {
-              "id": "L027",
-              "kind": "dialogue",
-              "character": "SAVITRI",
-              "text": "Child, where did you get that locket?",
-              "start": "00:02:06",
-              "end": "00:02:11"
-            },
-            {
-              "id": "L028",
-              "kind": "dialogue",
-              "character": "MAYA",
-              "text": "It's the only thing my mother left me. Why do you care?",
-              "start": "00:02:11",
-              "end": "00:02:16"
-            },
-            {
-              "id": "L029",
+              "id": "L001",
               "kind": "action",
               "character": null,
-              "text": "Savitri opens her own locket. Inside: the same photograph of a young woman.",
-              "start": "00:02:16",
-              "end": "00:02:22"
+              "text": "Savitri enters, cane striking marble. Maya follows, soaked, in her waitress uniform.",
+              "start": "00:00:00",
+              "end": "00:00:05"
             },
             {
-              "id": "L030",
-              "kind": "dialogue",
-              "character": "SAVITRI",
-              "text": "Because the woman in that picture was my daughter. Which makes you a Malhotra.",
-              "start": "00:02:22",
-              "end": "00:02:28"
-            },
-            {
-              "id": "L031",
+              "id": "L002",
               "kind": "action",
               "character": null,
-              "text": "Maya stares, rain streaming down her face. Behind them, Vikram watches from the doorway.",
-              "start": "00:02:28",
-              "end": "00:02:34"
+              "text": "The family is gathered: Rhea, Vikram, and Rhea's mother, NANDINI.",
+              "start": "00:00:05",
+              "end": "00:00:10"
+            },
+            {
+              "id": "L003",
+              "kind": "dialogue",
+              "character": "NANDINI",
+              "text": "Maa, you brought a stray in from the rain? At this hour?",
+              "start": "00:00:10",
+              "end": "00:00:15"
+            },
+            {
+              "id": "L004",
+              "kind": "dialogue",
+              "character": "SAVITRI",
+              "text": "Watch your tongue, Nandini. This girl is Meera's daughter. My granddaughter.",
+              "start": "00:00:15",
+              "end": "00:00:21"
             }
           ]
         }
       ],
-      "start_ts": "00:02:06",
-      "end_ts": "00:02:34",
-      "start_s": 126.0,
-      "end_s": 154.0,
-      "duration_s": 28.0,
-      "hook_line": "L027",
-      "hook_text": "Child, where did you get that locket?",
-      "hook_speaker": "SAVITRI",
-      "cliffhanger_line": "L031",
-      "cliffhanger_text": "Maya stares, rain streaming down her face. Behind them, Vikram watches from the doorway.",
-      "cliffhanger_speaker": null,
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L027) and closes on L031 at a scene boundary. Keyword signals: daughter. Spans 1 scene(s).",
+      "start_ts": "00:00:00",
+      "end_ts": "00:00:21",
+      "start_s": 0.0,
+      "end_s": 21.0,
+      "duration_s": 21.0,
+      "hook_line": "L003",
+      "hook_text": "Maa, you brought a stray in from the rain? At this hour?",
+      "hook_speaker": "NANDINI",
+      "cliffhanger_line": "L004",
+      "cliffhanger_text": "Watch your tongue, Nandini. This girl is Meera's daughter. My granddaughter.",
+      "cliffhanger_speaker": "SAVITRI",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L003) and closes on L004. Keyword signals: daughter, granddaughter. Spans 1 scene(s).",
       "patterns": [
         "Hidden lineage reveal"
       ],
       "ai_scores": {
         "hook_strength": 17.0,
-        "cliffhanger_strength": 21.0,
+        "cliffhanger_strength": 19.0,
         "emotional_impact": 10.0,
-        "standalone_clarity": 16.0
+        "standalone_clarity": 19.0
       },
       "editor_scores": {},
-      "overall": 64.0,
-      "rank": 19,
+      "overall": 65.0,
+      "rank": 20,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 17.0,
-        "cliffhanger_strength": 21.0,
+        "cliffhanger_strength": 19.0,
         "emotional_impact": 10.0,
-        "standalone_clarity": 16.0
+        "standalone_clarity": 19.0
       },
       "flags": []
     },
     {
-      "id": 94,
-      "run_id": 19,
-      "episode_id": 19,
+      "id": 119,
+      "run_id": 24,
+      "episode_id": 24,
       "episode_number": 4,
       "title": "Hidden lineage reveal — Maya",
       "segments": [
@@ -2134,15 +2274,15 @@
       },
       "editor_scores": {},
       "overall": 63.0,
-      "rank": 20,
+      "rank": 21,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 21.0,
         "cliffhanger_strength": 13.0,
@@ -2154,9 +2294,9 @@
       ]
     },
     {
-      "id": 95,
-      "run_id": 19,
-      "episode_id": 19,
+      "id": 120,
+      "run_id": 24,
+      "episode_id": 24,
       "episode_number": 4,
       "title": "Evidence twist — Nandini (V.O.)",
       "segments": [
@@ -2249,15 +2389,15 @@
       },
       "editor_scores": {},
       "overall": 62.0,
-      "rank": 21,
+      "rank": 22,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 16.0,
         "cliffhanger_strength": 21.0,
@@ -2267,9 +2407,9 @@
       "flags": []
     },
     {
-      "id": 99,
-      "run_id": 20,
-      "episode_id": 20,
+      "id": 125,
+      "run_id": 25,
+      "episode_id": 25,
       "episode_number": 5,
       "title": "Hidden lineage reveal — Arjun",
       "segments": [
@@ -2322,8 +2462,8 @@
           ]
         }
       ],
-      "start_ts": "00:00:00",
-      "end_ts": "00:00:21",
+      "start_ts": "00:00",
+      "end_ts": "00:21",
       "start_s": 0.0,
       "end_s": 21.0,
       "duration_s": 21.0,
@@ -2345,15 +2485,15 @@
       },
       "editor_scores": {},
       "overall": 62.0,
-      "rank": 22,
+      "rank": 23,
       "validation_status": "valid",
       "validation_errors": [],
       "review_status": "pending",
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
         "hook_strength": 19.0,
         "cliffhanger_strength": 15.0,
@@ -2363,26 +2503,34 @@
       "flags": []
     },
     {
-      "id": 79,
-      "run_id": 16,
-      "episode_id": 16,
+      "id": 104,
+      "run_id": 21,
+      "episode_id": 21,
       "episode_number": 1,
-      "title": "Dramatic confrontation",
+      "title": "Accusation of lies",
       "segments": [
         {
-          "start_line_id": "L002",
+          "start_line_id": "L001",
           "end_line_id": "L006",
-          "start": "00:00:05",
+          "start": "00:00:00",
           "end": "00:00:28",
-          "start_s": 5.0,
+          "start_s": 0.0,
           "end_s": 28.0,
-          "duration_s": 23.0,
-          "claimed_start": "00:00:05",
+          "duration_s": 28.0,
+          "claimed_start": "00:00:00",
           "claimed_end": "00:00:28",
           "scenes": [
             1
           ],
           "lines": [
+            {
+              "id": "L001",
+              "kind": "action",
+              "character": null,
+              "text": "Crystal chandeliers blaze. Maya balances a silver tray, eyes down, as a string quartet swells.",
+              "start": "00:00:00",
+              "end": "00:00:05"
+            },
             {
               "id": "L002",
               "kind": "dialogue",
@@ -2426,11 +2574,11 @@
           ]
         }
       ],
-      "start_ts": "00:00:05",
+      "start_ts": "00:00:00",
       "end_ts": "00:00:28",
-      "start_s": 5.0,
+      "start_s": 0.0,
       "end_s": 28.0,
-      "duration_s": 23.0,
+      "duration_s": 28.0,
       "hook_line": "L003",
       "hook_text": "A glass shatters nearby. Guests laugh. The head waiter, KUNAL, snaps his fingers at her.",
       "hook_speaker": null,
@@ -2439,136 +2587,16 @@
       "cliffhanger_speaker": "ANNOUNCER (V.O.)",
       "explanation": "Rule-based baseline: window opens on a high-intensity line (L003) and closes on L006. Keyword signals: none. Spans 1 scene(s).",
       "patterns": [
-        "Dramatic confrontation"
+        "Accusation of lies"
       ],
       "ai_scores": {
         "hook_strength": 18.0,
         "cliffhanger_strength": 15.0,
-        "emotional_impact": 9.0,
-        "standalone_clarity": 16.0
+        "emotional_impact": 8.0,
+        "standalone_clarity": 19.0
       },
       "editor_scores": {},
-      "overall": 58.0,
-      "rank": 23,
-      "validation_status": "valid",
-      "validation_errors": [],
-      "review_status": "pending",
-      "review_notes": null,
-      "provider": "heuristic",
-      "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
-      "scores": {
-        "hook_strength": 18.0,
-        "cliffhanger_strength": 15.0,
-        "emotional_impact": 9.0,
-        "standalone_clarity": 16.0
-      },
-      "flags": []
-    },
-    {
-      "id": 100,
-      "run_id": 20,
-      "episode_id": 20,
-      "episode_number": 5,
-      "title": "Dramatic confrontation — Arjun",
-      "segments": [
-        {
-          "start_line_id": "L004",
-          "end_line_id": "L010",
-          "start": "00:15",
-          "end": "00:52",
-          "start_s": 15.0,
-          "end_s": 52.0,
-          "duration_s": 37.0,
-          "claimed_start": "00:15",
-          "claimed_end": "00:52",
-          "scenes": [
-            1
-          ],
-          "lines": [
-            {
-              "id": "L004",
-              "kind": "dialogue",
-              "character": "ARJUN",
-              "text": "Under the will, the controlling stake of Malhotra Industries passes to Meera's heir.",
-              "start": "00:15",
-              "end": "00:21"
-            },
-            {
-              "id": "L005",
-              "kind": "dialogue",
-              "character": "NANDINI",
-              "text": "Then the will is outdated. Maa signed a new one last month.",
-              "start": "00:21",
-              "end": "00:26"
-            },
-            {
-              "id": "L006",
-              "kind": "action",
-              "character": null,
-              "text": "Nandini lays a document on the table. Savitri's signature glints at the bottom.",
-              "start": "00:26",
-              "end": "00:31"
-            },
-            {
-              "id": "L007",
-              "kind": "dialogue",
-              "character": "SAVITRI",
-              "text": "I signed no such thing.",
-              "start": "00:31",
-              "end": "00:36"
-            },
-            {
-              "id": "L008",
-              "kind": "dialogue",
-              "character": "NANDINI",
-              "text": "You signed a great many things, Maa, when you were on your medication.",
-              "start": "00:36",
-              "end": "00:42"
-            },
-            {
-              "id": "L009",
-              "kind": "action",
-              "character": null,
-              "text": "Arjun examines the paper. His expression darkens. It looks legitimate.",
-              "start": "00:42",
-              "end": "00:47"
-            },
-            {
-              "id": "L010",
-              "kind": "dialogue",
-              "character": "ARJUN",
-              "text": "If this holds up, Maya inherits nothing. Nandini controls the company.",
-              "start": "00:47",
-              "end": "00:52"
-            }
-          ]
-        }
-      ],
-      "start_ts": "00:00:15",
-      "end_ts": "00:00:52",
-      "start_s": 15.0,
-      "end_s": 52.0,
-      "duration_s": 37.0,
-      "hook_line": "L004",
-      "hook_text": "Under the will, the controlling stake of Malhotra Industries passes to Meera's heir.",
-      "hook_speaker": "ARJUN",
-      "cliffhanger_line": "L010",
-      "cliffhanger_text": "If this holds up, Maya inherits nothing. Nandini controls the company.",
-      "cliffhanger_speaker": "ARJUN",
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L004) and closes on L010 at a scene boundary. Keyword signals: heir, nothing, will. Spans 1 scene(s).",
-      "patterns": [
-        "Dramatic confrontation"
-      ],
-      "ai_scores": {
-        "hook_strength": 21.0,
-        "cliffhanger_strength": 14.0,
-        "emotional_impact": 7.0,
-        "standalone_clarity": 16.0
-      },
-      "editor_scores": {},
-      "overall": 58.0,
+      "overall": 60.0,
       "rank": 24,
       "validation_status": "valid",
       "validation_errors": [],
@@ -2576,95 +2604,133 @@
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
-        "hook_strength": 21.0,
-        "cliffhanger_strength": 14.0,
-        "emotional_impact": 7.0,
-        "standalone_clarity": 16.0
+        "hook_strength": 18.0,
+        "cliffhanger_strength": 15.0,
+        "emotional_impact": 8.0,
+        "standalone_clarity": 19.0
       },
-      "flags": [
-        "weak_cliffhanger"
-      ]
+      "flags": []
     },
     {
-      "id": 80,
-      "run_id": 16,
-      "episode_id": 16,
+      "id": 105,
+      "run_id": 21,
+      "episode_id": 21,
       "episode_number": 1,
-      "title": "Physical confrontation",
+      "title": "Past trauma — Announcer (V.O.)",
       "segments": [
         {
-          "start_line_id": "L019",
-          "end_line_id": "L022",
-          "start": "00:01:26",
-          "end": "00:01:46",
-          "start_s": 86.0,
-          "end_s": 106.0,
-          "duration_s": 20.0,
-          "claimed_start": "00:01:26",
-          "claimed_end": "00:01:46",
+          "start_line_id": "L005",
+          "end_line_id": "L013",
+          "start": "00:00:18",
+          "end": "00:01:02",
+          "start_s": 18.0,
+          "end_s": 62.0,
+          "duration_s": 44.0,
+          "claimed_start": "00:00:18",
+          "claimed_end": "00:01:02",
           "scenes": [
+            1,
             2
           ],
           "lines": [
             {
-              "id": "L019",
+              "id": "L005",
               "kind": "action",
               "character": null,
-              "text": "He reaches for her. She slaps him. The sound echoes down the corridor.",
-              "start": "00:01:26",
-              "end": "00:01:31"
+              "text": "The lights dim. A spotlight hits the grand staircase. The crowd turns.",
+              "start": "00:00:18",
+              "end": "00:00:23"
             },
             {
-              "id": "L020",
+              "id": "L006",
+              "kind": "dialogue",
+              "character": "ANNOUNCER (V.O.)",
+              "text": "Ladies and gentlemen, the future of Malhotra Industries — Vikram Malhotra and his bride-to-be, Rhea!",
+              "start": "00:00:23",
+              "end": "00:00:28"
+            },
+            {
+              "id": "L007",
               "kind": "action",
               "character": null,
-              "text": "Rhea appears at the end of the corridor, her smile gone cold.",
-              "start": "00:01:31",
-              "end": "00:01:36"
+              "text": "Applause. VIKRAM descends, perfect in black, RHEA glittering on his arm.",
+              "start": "00:00:28",
+              "end": "00:00:33"
             },
             {
-              "id": "L021",
+              "id": "L008",
+              "kind": "action",
+              "character": null,
+              "text": "Maya glances up. Freezes. The tray tilts. Her locket catches the light.",
+              "start": "00:00:33",
+              "end": "00:00:38"
+            },
+            {
+              "id": "L009",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "No. No, that's impossible.",
+              "start": "00:00:38",
+              "end": "00:00:42"
+            },
+            {
+              "id": "L010",
+              "kind": "action",
+              "character": null,
+              "text": "The tray crashes to the marble floor. Every head turns toward her.",
+              "start": "00:00:42",
+              "end": "00:00:47"
+            },
+            {
+              "id": "L011",
               "kind": "dialogue",
               "character": "RHEA",
-              "text": "Vikram, darling. Why is the waitress touching my fiancé?",
-              "start": "00:01:36",
-              "end": "00:01:41"
+              "text": "Oh dear. Someone get the help out of the way, please.",
+              "start": "00:00:47",
+              "end": "00:00:52"
             },
             {
-              "id": "L022",
+              "id": "L012",
               "kind": "action",
               "character": null,
-              "text": "Thunder rolls outside. Rain begins to streak the corridor window.",
-              "start": "00:01:41",
-              "end": "00:01:46"
+              "text": "Maya presses her back to the wall, gasping, clutching the locket.",
+              "start": "00:00:52",
+              "end": "00:00:57"
+            },
+            {
+              "id": "L013",
+              "kind": "dialogue",
+              "character": "MAYA",
+              "text": "Five years. They told me he died in that fire.",
+              "start": "00:00:57",
+              "end": "00:01:02"
             }
           ]
         }
       ],
-      "start_ts": "00:01:26",
-      "end_ts": "00:01:46",
-      "start_s": 86.0,
-      "end_s": 106.0,
-      "duration_s": 20.0,
-      "hook_line": "L019",
-      "hook_text": "He reaches for her. She slaps him. The sound echoes down the corridor.",
-      "hook_speaker": null,
-      "cliffhanger_line": "L022",
-      "cliffhanger_text": "Thunder rolls outside. Rain begins to streak the corridor window.",
-      "cliffhanger_speaker": null,
-      "explanation": "Rule-based baseline: window opens on a high-intensity line (L019) and closes on L022 at a scene boundary. Keyword signals: none. Spans 1 scene(s).",
+      "start_ts": "00:00:18",
+      "end_ts": "00:01:02",
+      "start_s": 18.0,
+      "end_s": 62.0,
+      "duration_s": 44.0,
+      "hook_line": "L006",
+      "hook_text": "Ladies and gentlemen, the future of Malhotra Industries — Vikram Malhotra and his bride-to-be, Rhea!",
+      "hook_speaker": "ANNOUNCER (V.O.)",
+      "cliffhanger_line": "L013",
+      "cliffhanger_text": "Five years. They told me he died in that fire.",
+      "cliffhanger_speaker": "MAYA",
+      "explanation": "Rule-based baseline: window opens on a high-intensity line (L006) and closes on L013. Keyword signals: died, impossible, fire. Spans 2 scene(s).",
       "patterns": [
-        "Physical confrontation",
-        "Love triangle"
+        "Past trauma"
       ],
       "ai_scores": {
-        "hook_strength": 16.0,
-        "cliffhanger_strength": 14.0,
-        "emotional_impact": 10.0,
-        "standalone_clarity": 16.0
+        "hook_strength": 18.0,
+        "cliffhanger_strength": 17.0,
+        "emotional_impact": 9.0,
+        "standalone_clarity": 12.0
       },
       "editor_scores": {},
       "overall": 56.0,
@@ -2675,17 +2741,15 @@
       "review_notes": null,
       "provider": "heuristic",
       "model": "keyword-baseline-v1",
-      "created_at": "2026-11-20T17:37:12+00:00",
-      "updated_at": "2026-11-20T17:37:12+00:00",
+      "created_at": "2026-11-20T18:04:53+00:00",
+      "updated_at": "2026-11-20T18:04:53+00:00",
       "scores": {
-        "hook_strength": 16.0,
-        "cliffhanger_strength": 14.0,
-        "emotional_impact": 10.0,
-        "standalone_clarity": 16.0
+        "hook_strength": 18.0,
+        "cliffhanger_strength": 17.0,
+        "emotional_impact": 9.0,
+        "standalone_clarity": 12.0
       },
-      "flags": [
-        "weak_cliffhanger"
-      ]
+      "flags": []
     }
   ]
 }

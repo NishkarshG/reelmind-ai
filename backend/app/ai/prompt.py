@@ -34,7 +34,8 @@ def build_prompt(ctx: dict, settings: dict) -> str:
         for e in ctx["elements"]:
             if e["scene"] != s["number"]:
                 continue
-            who = f"{e['character']}" + (f" ({e['parenthetical']})" if e.get("parenthetical") else "") if e["kind"] == "dialogue" else "ACTION"
+            who = (f"{e['character']}" + (f" ({e['parenthetical']})" if e.get("parenthetical") else "")) if e["kind"] == "dialogue" \
+                else {"action": "ACTION", "camera": "CAMERA", "sound": "SOUND FX"}.get(e["kind"], e["kind"].upper())
             lines.append(f"[{e['id']}] {e['start']} - {e['end']} | {who}: {e['text']}")
     script = "\n".join(lines)
     notes = "\n".join(f"- {x}" for x in ctx["continuity_notes"]) or "- (none)"
@@ -51,7 +52,8 @@ STRICT RULES
 - A segment is a continuous range of lines from start_line_id to end_line_id (inclusive). Its start/end timestamps must equal the start of the first line and the end of the last line, copied exactly.
 - Total duration (sum of segments) must be between {mn} and {mx} seconds.
 - Prefer ONE continuous segment. {"Use 2-3 segments only if they clearly improve the story; segments must be in chronological order and must not overlap." if multi else "Use exactly one continuous segment per candidate."}
-- hook.line_id must be inside the first segment; cliffhanger.line_id must be inside the last segment.
+- hook.line_id must be inside the first segment; cliffhanger.line_id must be inside the last segment. Hooks and cliffhangers should be DIALOGUE, ACTION or SOUND FX lines (not CAMERA).
+- CAMERA lines are shot boundaries; starting or ending a segment on a CAMERA line gives the editor a clean cut point. Timed lines may overlap: a segment's timestamps are the earliest start and latest end among its lines.
 - Return up to {n} candidates, best first. Diversity is better than near-duplicates.
 - Scores are editorial promo-potential judgments, NOT predictions of views or virality.
 
@@ -73,6 +75,6 @@ LOGLINE: {ctx['logline']}
 CONTINUITY NOTES:
 {notes}
 
-SCREENPLAY (line ID, timestamps, speaker, text):
+SCREENPLAY (line ID, timestamps, speaker or block type, text):
 {script}
 """

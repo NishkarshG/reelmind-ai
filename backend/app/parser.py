@@ -28,7 +28,7 @@ TS = r"\d{1,2}:\d{2}(?::\d{2})?(?:[.,]\d{1,3})?"
 SEP = r"\s*(?:-->|->|–|—|-|to)\s*"
 RANGE_RE = re.compile(rf"[\[\(]?\s*({TS}){SEP}({TS})\s*[\]\)]?")
 
-EPISODE_RE = re.compile(r"^\s*EP(?:ISODE)?\.?\s*(?:NUMBER|NUM|NO\.?|#)?\s*[:\-–#.]?\s*(\d+)\b", re.I)
+EPISODE_RE = re.compile(r"^\s*EP(?:ISODE)?\.?\s*(?:NUMBER|NUM|NO\.?|#)?\s*[:\-–#.]?\s*(?:EP(?:ISODE)?\.?\s*(?:NO\.?|#)?\s*)?(\d+)\b", re.I)
 LOGLINE_RE = re.compile(r"^\s*(?:EPISODE\s+)?LOG\s?LINE\s*[:\-–]?\s*(.*)$", re.I)
 CONT_RE = re.compile(r"^\s*CONTINUITY(?:\s+NOTES?)?\s*[:\-–]?\s*(.*)$", re.I)
 TITLE_RE = re.compile(r"^\s*(?:EPISODE\s+)?TITLE\s*[:\-–]\s*(.+)$", re.I)
@@ -46,6 +46,13 @@ SPEAKER_ONLY_RE = re.compile(
 )
 PAREN_RE = re.compile(r"^\s*\(([^)]*)\)\s*$")
 BULLET_RE = re.compile(r"^\s*(?:[-*•]|\d+[.)])\s+(.*)$")
+# Block layout: "**LABEL (emotion):**" header, then "Start: (t) | End: (t)", then text lines
+BLOCK_RE = re.compile(r"^\s*\*\*\s*(.+?)\s*:?\s*\*\*\s*:?\s*(.*)$")
+TIMING_RE = re.compile(rf"^\s*START\s*[:\-–]?\s*\(?\s*({TS})\s*\)?\s*[|,;/]?\s*END\s*[:\-–]?\s*\(?\s*({TS})\s*\)?\s*$", re.I)
+HEADING_RE = re.compile(r"^\s*(?:SCENE\s+)?(?:HEADING|SLUG(?:LINE)?|LOCATION)\s*[:\-–]\s*(.+)$", re.I)
+IGNORE_RE = re.compile(r"^\s*(?:-{2,}\s*SCRIPT\s+(?:START|END)\s*-{2,}|ACTIONS?\s+(?:AND|&)\s+DIALOGUE\s*:?)\s*$", re.I)
+EXTENSIONS = {"V.O.", "O.S.", "O.C.", "CONT'D", "VO", "OS", "OC", "CONTD", "PRE-LAP", "FILTERED"}
+SOUND_LABELS = {"SOUND", "SOUND FX", "SFX", "SOUND EFFECT", "SOUND EFFECTS", "MUSIC", "AUDIO"}
 
 
 def ts_to_seconds(ts: str) -> float:
@@ -142,6 +149,20 @@ def _clean_heading(text: str) -> str:
     return text.strip()
 
 
+def split_speaker(label: str) -> tuple[str, Optional[str]]:
+    """'JULIANA (V.O.) (Reflective, Vulnerable)' -> ('JULIANA (V.O.)', 'Reflective, Vulnerable')."""
+    name = re.sub(r"\(.*?\)", "", label).strip()
+    ext, notes = [], []
+    for grp in re.findall(r"\(([^)]*)\)", label):
+        for part in re.split(r"\s*/\s*", grp):
+            if not part:
+                continue
+            (ext if part.strip().upper() in EXTENSIONS else notes).append(part.strip())
+    if ext:
+        name += " " + " ".join(f"({e})" for e in ext)
+    return name, (", ".join(notes) or None)
+
+
 def parse_screenplay(text: str, filename: str = "") -> ParsedEpisode:
     lines = text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     ep = ParsedEpisode(episode_number=None)
@@ -214,8 +235,43 @@ def parse_screenplay(text: str, filename: str = "") -> ParsedEpisode:
                     ep.title = rest
                 continue
 
+        if IGNORE_RE.match(stripped):
+            pending = None
+            mode = "body"
+            continue
+
+        hm = HEADING_RE.match(stripped)
+        if hm and scene is not None and not scene.elements:
+            scene.heading = _clean_heading(hm.group(1))
+            mode = "body"
+            continue
+
+        # ---------- block layout: timing line for the pending block ----------
+        tm = TIMING_RE.match(stripped)
+        if tm and pending is not None and pending.start is None:
+            pending.start, pending.end = tm.group(1), tm.group(2)
+            pending.start_s, pending.end_s = ts_to_seconds(tm.group(1)), ts_to_seconds(tm.group(2))
+            pending.raw += "\n" + raw
+            continue
+
+        bm = BLOCK_RE.match(stripped)
+        if bm:
+            mode = "body"
+            label, inline = bm.group(1).strip().rstrip(":").strip(), bm.group(2).strip()
+            base = re.sub(r"\(.*?\)", "", label).strip().upper()
+            if base in ("CAMERA", "CAM", "SHOT"):
+                pending = add_element("camera", inline, None, None, idx, raw)
+            elif base in ("ACTION", "ACT", "DESCRIPTION"):
+                pending = add_element("action", inline, None, None, idx, raw)
+            elif base in SOUND_LABELS:
+                pending = add_element("sound", inline, None, None, idx, raw)
+            else:
+                name, paren = split_speaker(label)
+                pending = add_element("dialogue", inline, None, None, idx, raw, character=name, paren=paren)
+            continue
+
         # ---------- scene headings ----------
-        is_scene_kw = re.match(r"^\s*SCENE\b(?!\s+(?:START|END)\b)", stripped, re.I)
+        is_scene_kw = re.match(r"^\s*SCENE\b(?!\s+(?:START|END|HEADING)\b)", stripped, re.I)
         if is_scene_kw or SLUG_RE.match(stripped):
             pending = None
             mode = "body"

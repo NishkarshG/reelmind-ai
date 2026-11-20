@@ -134,6 +134,31 @@ Create a class in `backend/app/ai/` that implements `AIProvider.generate(prompt,
 5. Explore **Scene Intelligence** and **Analytics**, and audit the run in **Quality Evaluation**.
 
 ### Supported screenplay layouts (mixable)
+**Block layout** (one `Start/End` timing line per block, timed CAMERA and SOUND FX):
+```
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: ...
+CONTINUITY NOTES: ...
+--- SCRIPT START ---
+SCENE 01
+Scene heading: INT. CATHEDRAL – DAY
+Scene start: 00:00.00
+Scene end: 02:18.00
+Actions and dialogue:
+**CAMERA:**
+Start: (00:00.00) | End: (00:04.80)
+Symmetrical framing on the church doors...
+**LADY JULIANA (V.O.) (Confused, Breathless):**
+Start: (00:13.50) | End: (00:14.30)
+"Why?"
+**SOUND FX:**
+Start: (00:20.00) | End: (00:21.00)
+[Gavel strike]
+--- SCRIPT END ---
+```
+Camera, action, dialogue and SFX blocks can overlap in time. Each promo segment spans the earliest start and latest end of its lines, and the original timestamp strings are kept. CAMERA lines act as clean cut points but are never used as hooks or cliffhangers.
+
+**Inline layouts:**
 ```
 EPISODE NUMBER: 1            | EPISODE 4             | Episode No. 5
 EPISODE LOGLINE: ...         | LOGLINE: ...          | Logline - ...

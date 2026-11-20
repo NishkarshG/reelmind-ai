@@ -5,7 +5,7 @@ import { patch } from "../lib/api";
 import { DIMENSIONS, fmtDur } from "../lib/format";
 import { useStore } from "../lib/store";
 import type { Promo, ScoreSet } from "../lib/types";
-import { Badge, Button, cx, Drawer, FlagBadge, ReviewBadge, ScoreBar, ScoreRing } from "./ui";
+import { Badge, BlockText, Button, cx, Drawer, FlagBadge, ReviewBadge, ScoreBar, ScoreRing } from "./ui";
 
 export function PromoCard({ p, onOpen, compact, delay = 0 }: { p: Promo; onOpen: () => void; compact?: boolean; delay?: number }) {
   const invalid = p.validation_status !== "valid";
@@ -258,7 +258,7 @@ export function PromoDrawer({ promo, onClose, onChanged }: { promo: Promo | null
                             <span className="text-zinc-300 ml-2">{l.text}</span>
                           </>
                         ) : (
-                          <span className="text-mute italic">{l.text}</span>
+                          <BlockText kind={l.kind} text={l.text} />
                         )}
                         {l.id === p.hook_line && <Badge tone="accent" className="ml-2">hook</Badge>}
                         {l.id === p.cliffhanger_line && <Badge tone="info" className="ml-2">cliffhanger</Badge>}

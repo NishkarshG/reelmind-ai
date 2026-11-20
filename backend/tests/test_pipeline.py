@@ -99,3 +99,52 @@ def test_llm_path_with_stub_provider(tmp_path, monkeypatch):
     assert bad["validation_status"] == "invalid"
     codes = {e["code"] for e in bad["validation_errors"]}
     assert "excerpt_not_found" in codes and "invalid_timestamp" in codes and "duration_out_of_range" in codes
+
+
+BLOCK_SCRIPT = '''EPISODE NUMBER: Episode 7
+EPISODE LOGLINE: A test logline.
+CONTINUITY NOTES: Single-line continuity note.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. HALL – NIGHT
+Scene start: 00:00.00
+Scene end: 00:30.00
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:04.80)
+Wide shot of the hall.
+
+**ACTION:**
+Start: (00:01.00) | End: (00:04.80)
+She stops at the door.
+
+**LADY JULIANA (V.O.) (Confused, Breathless):**
+Start: (00:05.50) | End: (00:07.30)
+"Why?"
+
+**LORD ASHCROFT (O.S. / Continues):**
+Start: (00:08.00) | End: (00:10.00)
+"Because I said so."
+
+**SOUND FX:**
+Start: (00:10.00) | End: (00:11.00)
+[Thunder]
+
+--- SCRIPT END ---'''
+
+
+def test_block_layout():
+    p = parse_screenplay(BLOCK_SCRIPT, "episode-007-Episode 123.txt")
+    assert p.episode_number == 7 and not p.errors
+    assert p.continuity_notes == ["Single-line continuity note."]
+    sc = p.scenes[0]
+    assert (sc.heading, sc.start, sc.end, len(p.scenes)) == ("INT. HALL – NIGHT", "00:00.00", "00:30.00", 1)
+    els = p.all_elements()
+    assert [e.kind for e in els] == ["camera", "action", "dialogue", "dialogue", "sound"]
+    assert (els[2].character, els[2].parenthetical, els[2].text, els[2].start) == ("LADY JULIANA (V.O.)", "Confused, Breathless", '"Why?"', "00:05.50")
+    assert (els[3].character, els[3].parenthetical) == ("LORD ASHCROFT (O.S.)", "Continues")
+    assert els[4].text == "[Thunder]" and els[4].end_s == 11.0

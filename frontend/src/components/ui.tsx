@@ -314,3 +314,13 @@ export const chartTooltip = {
   labelStyle: { color: "#fff", fontWeight: 600, marginBottom: 4 },
   itemStyle: { color: "#c9c9d9" },
 };
+
+export function BlockText({ kind, text }: { kind: string; text: string }) {
+  const tag = kind === "camera" ? { l: "CAM", c: "text-hot/80 border-hot/25" } : kind === "sound" ? { l: "SFX", c: "text-warn/80 border-warn/25" } : null;
+  return (
+    <span className={kind === "camera" ? "text-zinc-400 italic" : "text-mute italic"}>
+      {tag && <span className={`not-italic font-mono text-[9.5px] font-semibold border rounded px-1 py-px mr-1.5 ${tag.c}`}>{tag.l}</span>}
+      {text}
+    </span>
+  );
+}
