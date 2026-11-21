@@ -1,8 +1,7 @@
-# Netlify hosts the React frontend. Netlify cannot run the Python/FastAPI
-# backend, so by default the site is built as a clearly-labelled, read-only
-# STATIC PREVIEW of the demo workspace (VITE_STATIC_DEMO=1).
-# To connect a real backend, set VITE_API_URL to your deployed API and
-# VITE_STATIC_DEMO=0 in Netlify → Site configuration → Environment variables.
+# Netlify hosts the React frontend. Netlify cannot run Python, so the FastAPI
+# backend runs on Render (see render.yaml) and the frontend calls it directly.
+# For a backend-less, read-only preview of the demo workspace instead, set
+# VITE_STATIC_DEMO = "1" and remove VITE_API_URL.
 [build]
   base = "frontend"
   command = "npm ci && npm run build"
@@ -10,7 +9,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  VITE_STATIC_DEMO = "1"
+  VITE_STATIC_DEMO = "0"
+  VITE_API_URL = "https://reelmind-api.onrender.com"
 
 [[redirects]]
   from = "/*"

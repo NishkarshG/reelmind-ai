@@ -38,6 +38,7 @@ backend/                 FastAPI + SQLite
   app/ai/                Pluggable providers
      base.py             AIProvider interface
      gemini.py           Google Gemini (REST, key from GEMINI_API_KEY)
+     openrouter.py       OpenRouter (Gemma etc., key from OPENROUTER_API_KEY)
      heuristic.py        Offline rule-based baseline (clearly labelled)
      prompt.py           Episode context + strict JSON prompt
   app/validation.py      Candidate validation and scoring
@@ -113,7 +114,9 @@ cd backend && .venv/bin/python -m pytest -q
 
 | Variable | Where | Purpose |
 |---|---|---|
-| `GEMINI_API_KEY` | `backend/.env` | Gemini key. Only the server reads it; it is never stored in the DB or sent to the browser |
+| `GEMINI_API_KEY` | `backend/.env` | Google Gemini key (`AIza…`). Only the server reads it; it is never stored in the DB or sent to the browser |
+| `OPENROUTER_API_KEY` | `backend/.env` | OpenRouter key (`sk-or-…`) for the OpenRouter provider (Gemma, Llama, Gemini and more). Server-side only |
+| `REELMIND_DEFAULT_PROVIDER` / `REELMIND_DEFAULT_MODEL` | env | Default provider and model until changed in Settings (e.g. `openrouter` / `google/gemma-4-26b-a4b-it:free`) |
 | `CORS_ORIGINS` | `backend/.env` | Comma-separated allowed origins (default `*`) |
 | `REELMIND_DATA_DIR` / `REELMIND_OUTPUT_DIR` | env | Override the SQLite and output locations |
 | `VITE_API_URL` | frontend build env | Backend URL when the frontend is hosted separately |
@@ -173,8 +176,11 @@ CAMERA: ...                  | CAMERA - ...
 ---
 
 ## Deployment
-- **Frontend (Netlify).** `netlify.toml` builds `frontend/`. Netlify can't run Python, so by default the site is a clearly labelled **read-only static preview of the demo workspace**. Uploads, AI analysis and editing explain that the backend is required.
-- **Backend.** Deploy `backend/` to any Python host. `render.yaml` is included for Render. Then set `VITE_API_URL=<your API URL>` and `VITE_STATIC_DEMO=0` in Netlify's environment variables and redeploy to get the fully working app.
+Live: **https://reelmind-ai.netlify.app** (frontend) → **https://reelmind-api.onrender.com** (API).
+
+- **Frontend (Netlify).** `netlify.toml` builds `frontend/` with `VITE_API_URL` pointing at the Render API. Settings in `netlify.toml` override the Netlify dashboard. For a backend-less, read-only preview of the demo workspace, set `VITE_STATIC_DEMO = "1"` and remove `VITE_API_URL`.
+- **Backend (Render).** `render.yaml` is a Render Blueprint for `backend/`. Render asks for `OPENROUTER_API_KEY` / `GEMINI_API_KEY` when you create it. `REELMIND_DEFAULT_PROVIDER` / `REELMIND_DEFAULT_MODEL` set the default AI model.
+- **Free-plan limits.** The service sleeps after 15 minutes idle, so the first request takes about a minute. Its disk is temporary: the demo workspace is re-seeded on every start, but live uploads are lost when it restarts. Attach a Render disk and set `REELMIND_DATA_DIR` to keep them.
 - Regenerate the static snapshot with `cd backend && .venv/bin/python scripts/export_static_demo.py ../frontend/public/static-demo`.
 
 ## Notes and limitations
