@@ -1,13 +1,25 @@
-# Optional: deploy the FastAPI backend to Render (https://render.com) as a web service.
+# Deploys the FastAPI backend to Render (https://render.com) as a web service.
+# Note: the free plan's disk is temporary. The demo workspace is re-seeded on
+# every start, but uploads to the live workspace are lost when the service restarts.
 services:
   - type: web
     name: reelmind-api
     runtime: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: OPENROUTER_API_KEY
+        sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: REELMIND_DEFAULT_PROVIDER
+        value: openrouter
+      - key: REELMIND_DEFAULT_MODEL
+        value: google/gemma-4-26b-a4b-it:free
       - key: CORS_ORIGINS
         value: "*"

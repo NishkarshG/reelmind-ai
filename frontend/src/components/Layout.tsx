@@ -129,7 +129,7 @@ function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
             {STATIC_MODE ? "Static preview" : backendOnline ? "Engine online" : backendOnline === false ? "Engine offline" : "Connecting…"}
           </div>
           <div className="text-dim mt-1 leading-relaxed">
-            {STATIC_MODE ? "Read-only demo snapshot. Run the backend for live analysis." : "FastAPI · SQLite · Gemini"}
+            {STATIC_MODE ? "Read-only demo snapshot. Run the backend for live analysis." : "FastAPI · SQLite · Gemini / OpenRouter"}
           </div>
         </div>
       </div>

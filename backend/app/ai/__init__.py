@@ -1,11 +1,12 @@
 from .base import AIProvider, ProviderError
 from .gemini import GeminiProvider
 from .heuristic import HeuristicProvider
+from .openrouter import OpenRouterProvider
 
 # Register new providers here (e.g. OpenAI, Anthropic) — they only need to
 # implement AIProvider.generate() and return the shared JSON contract.
 PROVIDERS: dict[str, AIProvider] = {
-    p.id: p for p in (GeminiProvider(), HeuristicProvider())
+    p.id: p for p in (GeminiProvider(), OpenRouterProvider(), HeuristicProvider())
 }
 
 

@@ -126,7 +126,7 @@ export default function Settings() {
                 <p className="text-[12.5px] text-mute mt-3 leading-relaxed">
                   For security the key is never entered in the browser or saved in the database. Add it to <code className="text-zinc-300">backend/.env</code> and restart the API:
                 </p>
-                <pre className="mt-2 text-[12px] font-mono bg-black/40 border border-line rounded-lg p-3 text-zinc-300 overflow-x-auto">GEMINI_API_KEY=your-key-here</pre>
+                <pre className="mt-2 text-[12px] font-mono bg-black/40 border border-line rounded-lg p-3 text-zinc-300 overflow-x-auto">{provider.env_var}=your-key-here</pre>
                 <div className="flex flex-wrap gap-2 mt-4">
                   <Button icon={<PlugZap className="size-4" />} loading={testing} disabled={STATIC_MODE} onClick={test}>
                     Test connection

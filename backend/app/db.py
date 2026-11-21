@@ -205,8 +205,9 @@ def log_activity(ws: str, kind: str, message: str, meta: dict | None = None) -> 
 
 
 DEFAULT_SETTINGS = {
-    "provider": "gemini",
-    "model": "gemini-2.5-flash",
+    # Overridable per deployment (e.g. on a host whose disk resets on restart).
+    "provider": os.getenv("REELMIND_DEFAULT_PROVIDER", "gemini"),
+    "model": os.getenv("REELMIND_DEFAULT_MODEL", "gemini-2.5-flash"),
     "temperature": 0.4,
     "max_candidates_per_episode": 5,
     "min_duration_s": 20,
