@@ -6,6 +6,7 @@ to the browser."""
 from __future__ import annotations
 
 import os
+import time
 
 import httpx
 
@@ -13,11 +14,14 @@ from .base import AIProvider, ProviderError
 
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 
+# gemini-2.5-* is no longer offered to newly created keys; newer keys need 3.x.
 SUGGESTED_MODELS = [
+    "gemini-3.5-flash",
+    "gemini-3-flash-preview",
+    "gemini-3.5-flash-lite",
+    "gemini-flash-latest",
+    "gemini-3.1-pro-preview",
     "gemini-2.5-flash",
-    "gemini-2.5-pro",
-    "gemini-2.5-flash-lite",
-    "gemini-2.0-flash",
 ]
 
 
@@ -69,7 +73,7 @@ class GeminiProvider(AIProvider):
         k = _key()
         if not k:
             raise ProviderError("GEMINI_API_KEY is not set on the server. Configure it in backend/.env and restart.")
-        model = settings.get("model") or "gemini-2.5-flash"
+        model = settings.get("model") or SUGGESTED_MODELS[0]
         body = {
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
@@ -79,7 +83,12 @@ class GeminiProvider(AIProvider):
         }
         try:
             with self._client() as c:
-                r = c.post(f"{API_ROOT}/models/{model}:generateContent", headers={"x-goog-api-key": k}, json=body)
+                for wait in (0, 5, 15, 30):
+                    if wait:
+                        time.sleep(wait)  # 429/503 "high demand" spikes are usually brief
+                    r = c.post(f"{API_ROOT}/models/{model}:generateContent", headers={"x-goog-api-key": k}, json=body)
+                    if r.status_code not in (429, 500, 503):
+                        break
         except httpx.HTTPError as e:
             raise ProviderError(f"Network error calling Gemini: {e}") from e
         if r.status_code != 200:

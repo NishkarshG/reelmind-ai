@@ -122,7 +122,7 @@ cd backend && .venv/bin/python -m pytest -q
 | `VITE_API_URL` | frontend build env | Backend URL when the frontend is hosted separately |
 | `VITE_STATIC_DEMO` | frontend build env | `1` builds a read-only static preview of the demo workspace |
 
-The model is selected in **Settings** (default `gemini-2.5-flash`). Use **Fetch available models** to list the models your key can access.
+The model is selected in **Settings** (default `gemini-3.5-flash`; Google no longer offers `gemini-2.5-*` to new keys). Use **Fetch available models** to list the models your key can access.
 
 ### Adding another AI provider
 Create a class in `backend/app/ai/` that implements `AIProvider.generate(prompt, context, settings) -> str` and returns the same JSON contract. Then register it in `backend/app/ai/__init__.py`. Validation, ranking, the UI and exports work unchanged.

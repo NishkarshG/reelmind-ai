@@ -13,13 +13,13 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: "3.12.7"
-      - key: OPENROUTER_API_KEY
-        sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
       - key: REELMIND_DEFAULT_PROVIDER
-        value: openrouter
+        value: gemini
       - key: REELMIND_DEFAULT_MODEL
-        value: google/gemma-4-26b-a4b-it:free
+        value: gemini-3.5-flash
       - key: CORS_ORIGINS
         value: "*"
